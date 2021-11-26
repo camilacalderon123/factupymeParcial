@@ -102,7 +102,7 @@ public class GenerarPDF {
     }
 <<<<<<< HEAD
 }
-*/
+
 =======
     
     private void tablaProductos(Table tabla, PdfFont font, Document document, DetalleFactura df) {
@@ -146,4 +146,4 @@ public class GenerarPDF {
 
 
 }
->>>>>>> ae1cf9200280d67a0b2edf6c4c9a97cc690310c3
+*/
