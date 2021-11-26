@@ -1,59 +1,67 @@
 
 package com.soltec.controllers;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.soltec.entities.RangoNumeracion;
+import com.soltec.service.RangoNumeracionService;
 
 @RestController // Controlador de tipo Rest
 @CrossOrigin(origins="http://localhost:4200", methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT, RequestMethod.DELETE})
 @RequestMapping("/rango_numeracion")//Se accede a través de esta URL
 public class RangoNumeracionController {
 
-	/*@Autowired // estamos inyectando la Interface de ClienteService en el controlador
-	private ClienteService clientService;
+	@Autowired // estamos inyectando la Interface de ClienteService en el controlador
+	private RangoNumeracionService rangoNumeracionService;
 	
-	//Creando un nuevo cliente
+	//Creando un nuevo rango
 	@PostMapping("/")
-	public ResponseEntity<?> crear(@RequestBody Cliente cliente) {
-		return ResponseEntity.status(HttpStatus.CREATED).body(clientService.save(cliente));
-		
+	public ResponseEntity<?> crear(@RequestBody RangoNumeracion rangoNumeracion) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(rangoNumeracionService.save(rangoNumeracion));
 	}
 	
-	//Listar todos los usuarios
+	//Listar todos los rangos
 	@GetMapping("/")
-	public List<Cliente> leerTodos(){
-		List<Cliente> cliente = StreamSupport.stream(clientService.findAll().spliterator(),false).collect(Collectors.toList());
-		return cliente;
+	public List<RangoNumeracion> leerTodos(){
+		List<RangoNumeracion> rango = StreamSupport.stream(rangoNumeracionService.findAll().spliterator(),false).collect(Collectors.toList());
+		return rango;
 	}
 	
-	//Leer 1 usuario por ID
-	@GetMapping("/listar-id/{numero_documento}")
-	public ResponseEntity<?> leer(@PathVariable(value="numero_documento") Integer id_cliente){
-		Optional<Cliente> cliente = clientService.findById(id_cliente);
-		if (!cliente.isPresent()) {
-			return ResponseEntity.notFound().build(); 
+	//Listar uno solo 
+	@GetMapping("/listar-rangos/{idNumeracion}")
+	public ResponseEntity<?> obtenerProducto(@PathVariable(value="idNumeracion") Integer idNumeracion) {
+		Optional<RangoNumeracion> rango = rangoNumeracionService.findById(idNumeracion);
+		if(!rango.isPresent()) {
+			return ResponseEntity.notFound().build();
 		}
-		return ResponseEntity.ok(cliente);
+		return ResponseEntity.ok(rango);
 	}
 	
-	//Editar un usuario
-	@PutMapping("/")
-	public ResponseEntity<?> editar(@RequestBody Cliente clienteEditar){
-		return ResponseEntity.status(HttpStatus.CREATED).body(clientService.save(clienteEditar));
-	}
-	
-	//Eliminar un cliente
-	@DeleteMapping("/eliminar/{numero_documento}")
-	public ResponseEntity<?> eliminar(@PathVariable(value="numero_documento") Integer id_cliente){
-		if (!clientService.findById(id_cliente).isPresent()) {
-			return ResponseEntity.notFound().build(); 
+
+	//Eliminar un rango
+		@DeleteMapping("/{codigo}")
+		public ResponseEntity<?> eliminar(@PathVariable(value="idNumeracion") Integer idNumeracion){
+			if(!rangoNumeracionService.findById(idNumeracion).isPresent()) {
+				return ResponseEntity.notFound().build();
+			}
+			rangoNumeracionService.deleteById(idNumeracion);
+			return ResponseEntity.ok().build();
 		}
-		
-		clientService.deleteById(id_cliente);
-		return ResponseEntity.ok().build();
-	}
-	*/
 
 	
 }
