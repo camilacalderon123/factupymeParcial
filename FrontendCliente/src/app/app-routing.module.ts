@@ -5,6 +5,7 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { AgregarClienteComponent } from './clientes/agregar-cliente.component';
 import { EditarClienteComponent } from './clientes/editar-cliente.component';
 import { FacturaComponent } from './factura/factura.component';
+import { VerTotalComponent } from './factura/ver-total.component';
 
 
 
@@ -14,6 +15,7 @@ const routes:Routes=[
     {path: 'clientes/form', component:AgregarClienteComponent },
     {path: 'clientes/editar/:id', component:EditarClienteComponent },
     {path: 'emitirFactura', component:FacturaComponent },
+    {path: 'emitirFactura/total', component:VerTotalComponent},
     {path: '**', redirectTo:'/', pathMatch:'full' } //aca tengo que redireccionarlo al 404
 ]
 
