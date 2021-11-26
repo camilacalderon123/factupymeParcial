@@ -14,6 +14,7 @@ import { AgregarClienteComponent } from './clientes/agregar-cliente.component';
 import { AppRoutingModule } from './app-routing.module';
 import { EditarClienteComponent } from './clientes/editar-cliente.component';
 import { FacturaComponent } from './factura/factura.component';
+import { VerTotalComponent } from './factura/ver-total.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FacturaComponent } from './factura/factura.component';
     HeaderComponent,
     AgregarClienteComponent,
     EditarClienteComponent,
-    FacturaComponent
+    FacturaComponent,
+    VerTotalComponent
   ],
   imports: [
     BrowserModule,
