@@ -1,0 +1,55 @@
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="title_client">Productos</h1>
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Valor Unitario</th>
+                                <th>Unidad de medida</th>
+                                <th>Porcentaje de descuento</th>
+                                <th>IVA</th>
+                                <th>Estado</th>
+                                <th>Editar</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+  
+                        <tbody>
+                            <tr>
+                            <tr *ngFor="let producto of productos">
+                                <!--recoge cada estudiante que venga de la BD y lo va poniendo en la lista-->
+                                <th scope="row">{{producto.codigo}}</th>
+                                <td>{{producto.nombre}}</td>
+                                <td>{{producto.descripcion}}</td>
+                                <td>{{producto.valor_unitario}}</td>
+                                <td>{{producto.unidad_medida}}</td>
+                                <td>{{producto.porcentaje_descuento}}</td>
+                                <td>{{producto.iva}}</td>
+                                <td>{{producto.estado}}</td>
+                                <td>
+                                    <button class="btn boton-accion" [routerLink]="['/editar', producto.codigo]">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn boton-accion" (click)="delete(producto)">
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>

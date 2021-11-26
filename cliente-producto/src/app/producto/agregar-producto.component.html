@@ -1,0 +1,77 @@
+<div class="container-fluid">
+    <h1 class="title_client">Agregar producto</h1>
+    <!-- Page Heading -->
+    <div class="card shadow mb-4">
+        <div class="container">
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">
+                            ID producto
+                        </span>
+                        <input name="codigo"  type="text" [(ngModel)]="producto.codigo" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <span class="details">
+                            Nombre
+                        </span>
+                        <input name="nombre" type="text" [(ngModel)]="producto.nombre" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <span class="details">
+                            Descripción
+                        </span>
+                        <input name="descripcion" type="text" [(ngModel)]="producto.descripcion" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <span class="details">
+                            Unidad de medida
+                        </span>
+                        <input name="unidad_medida" type="text" [(ngModel)]="producto.unidad_medida" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <span class="details">
+                            Valor unitario
+                        </span>
+                        <input name="valor_unitario" type="text" [(ngModel)]="producto.valor_unitario" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <span class="details">
+                            IVA
+                        </span>
+                        <input name="iva" type="text" [(ngModel)]="producto.iva" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <span class="details">
+                            % Descuento
+                        </span>
+                        <input name="porcentaje_descuento" type="number" [(ngModel)]="producto.porcentaje_descuento"
+                            required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <span class="details">
+                            Estado
+                        </span>
+                        <input name="estado" type="number" [(ngModel)]="producto.estado"
+                            required>
+                    </div>
+                </div>
+                    <div class="buttom">
+                        <button class="button_style" (click)='create()'>Guardar</button>
+                        <!--con el create() se redirige a la funcion que esta en nuestro component-->
+                    </div>
+                    <div class="buttom2">
+                        <button class="button_style" [routerLink]="['/ver-productos']">Cancelar</button>
+                    </div>
+
+                    
+            </form>
+        </div>
+    
