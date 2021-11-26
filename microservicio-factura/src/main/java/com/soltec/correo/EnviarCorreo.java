@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-
+import com.soltec.entities.DetalleFactura;
 import com.soltec.entities.Factura;
 import com.soltec.entities.Usuario;
 
@@ -27,7 +27,7 @@ public class EnviarCorreo {
 	}
 
 	public boolean enviarCorreo(String nombreArchivo, File img, String nombreAnimal, Usuario us,
-			Factura factura) {
+			Factura factura, DetalleFactura df) {
 		System.out.println("dadssada");
 		boolean creado = false;
 		boolean enviado = false;
@@ -36,7 +36,7 @@ public class EnviarCorreo {
 					"\u001B[36m¡Hola! \nNos alegramos que hayas generado una factura en nuestro sitio web, en el siguiente archivo encontrarás los detalles de tu factura electrónica",
 					"Factura electrónica");
 
-			creado = generarPDF.generarPDF(nombreArchivo, img, nombreAnimal, us, factura);
+			creado = generarPDF.generarPDF(nombreArchivo, img, nombreAnimal, us, factura, df);
 
 			correo.setRutaArchivo(new File(nombreArchivo).toString());
 
