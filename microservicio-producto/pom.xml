@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.soltec</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>microservicio-producto</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>microservicio-producto</name>
 	<description>Demo project for Spring Boot</description>
