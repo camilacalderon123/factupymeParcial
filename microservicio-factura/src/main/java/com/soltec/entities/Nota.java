@@ -18,41 +18,47 @@ public class Nota {
 	private String mensaje;
 
 	
-	private Factura factura;
+	private String factura_CUFE;
 
-	public Nota() {
-	}
 
 	public int getIdNota() {
-		return this.idNota;
+		return idNota;
 	}
+
 
 	public void setIdNota(int idNota) {
 		this.idNota = idNota;
 	}
 
+
 	public String getDescripcion() {
-		return this.descripcion;
+		return descripcion;
 	}
+
 
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
 
+
 	public String getMensaje() {
-		return this.mensaje;
+		return mensaje;
 	}
+
 
 	public void setMensaje(String mensaje) {
 		this.mensaje = mensaje;
 	}
 
-	public Factura getFactura() {
-		return this.factura;
+
+	public String getFactura_CUFE() {
+		return factura_CUFE;
 	}
 
-	public void setFactura(Factura factura) {
-		this.factura = factura;
+
+	public void setFactura_CUFE(String factura) {
+		this.factura_CUFE = factura;
 	}
+
 
 }

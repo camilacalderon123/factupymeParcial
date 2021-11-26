@@ -1,4 +1,4 @@
-package com.soltec.correo;
+/* package com.soltec.correo;
 
 import com.itextpdf.io.font.FontConstants;
 import com.itextpdf.io.image.ImageData;
@@ -93,3 +93,4 @@ public class GenerarPDF {
         }
     }
 }
+*/

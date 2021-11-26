@@ -6,7 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import com.soltec.entities.Factura;
-import com.soltec.entities.Usuario;
+/*import com.soltec.entities.Usuario;*/
 
 public interface FacturaService{
 	

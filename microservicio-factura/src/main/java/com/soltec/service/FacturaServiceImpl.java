@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.soltec.entities.Factura;
-import com.soltec.entities.Usuario;
+/*import com.soltec.entities.Usuario;*/
 import com.soltec.repository.FacturaRepository;
 
 public class FacturaServiceImpl {

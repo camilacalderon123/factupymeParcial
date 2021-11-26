@@ -1,4 +1,4 @@
-package com.soltec.correo;
+/* package com.soltec.correo;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -80,3 +80,4 @@ public class EnviarCorreo {
 	}
 
 }
+*/

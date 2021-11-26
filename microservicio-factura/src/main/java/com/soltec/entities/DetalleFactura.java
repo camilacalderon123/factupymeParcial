@@ -1,4 +1,4 @@
-package com.soltec.entities;
+/*package com.soltec.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -57,3 +57,4 @@ public class DetalleFactura {
 	}
 
 }
+ */

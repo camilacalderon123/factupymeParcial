@@ -34,7 +34,7 @@ public class Factura {
 	private double valorNeto;
 
 	
-	private List<DetalleFactura> detalleFacturas;
+	/*private List<DetalleFactura> detalleFacturas;
 
 	
 	private List<Documento> documentos;
@@ -43,7 +43,7 @@ public class Factura {
 	private Cliente cliente;
 
 	
-	private Empresa empresa;
+	private Empresa empresa;*/
 
 
 	private RangoNumeracion rangoNumeracionBean;
@@ -110,7 +110,7 @@ public class Factura {
 		this.valorNeto = valorNeto;
 	}
 
-	public List<DetalleFactura> getDetalleFacturas() {
+	/*public List<DetalleFactura> getDetalleFacturas() {
 		return this.detalleFacturas;
 	}
 
@@ -168,7 +168,7 @@ public class Factura {
 
 	public void setEmpresa(Empresa empresa) {
 		this.empresa = empresa;
-	}
+	}*/
 
 	public RangoNumeracion getRangoNumeracionBean() {
 		return this.rangoNumeracionBean;
@@ -188,14 +188,14 @@ public class Factura {
 
 	public Nota addNota(Nota nota) {
 		getNotas().add(nota);
-		nota.setFactura(this);
+		nota.setFactura_CUFE(this);
 
 		return nota;
 	}
 
 	public Nota removeNota(Nota nota) {
 		getNotas().remove(nota);
-		nota.setFactura(null);
+		nota.setFactura_CUFE(null);
 
 		return nota;
 	}
