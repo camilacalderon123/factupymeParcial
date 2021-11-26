@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController // Controlador de tipo Rest
 @CrossOrigin(origins="http://localhost:4200", methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT, RequestMethod.DELETE})
-@RequestMapping("/factura")//Se accede a través de esta URL
-public class FacturaController {
+@RequestMapping("/rango_numeracion")//Se accede a través de esta URL
+public class RangoNumeracionController {
 
 	/*@Autowired // estamos inyectando la Interface de ClienteService en el controlador
 	private ClienteService clientService;
