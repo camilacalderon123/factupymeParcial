@@ -1,0 +1,78 @@
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="title_client">Editar cliente</h1>
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                      <div class="card-body">
+                        <form action="#">
+                          <div class="user-details">
+  
+                            <div class="input-box">
+                              <span class="details">Tipo de documento</span>
+                              <input type="text" name="tipo_documento" [(ngModel)]="clientes.tipo_documento" disabled >
+                            </div>
+  
+                            <div class="input-box">
+                              <span class="details">Número de documento</span>
+                              <input type="number" name="numero_documento" [(ngModel)]="clientes.numero_documento" disabled>
+                            </div>
+  
+                            <div class="input-box">
+                              <span class="details">Nombre comercial</span>
+                              <input type="text" name="nombre_comercial" [(ngModel)]="clientes.nombre_comercial" required>
+                            </div>
+                            <div class="input-box">
+                              <span class="details">Nombre </span>
+                              <input type="text" name="nombre" [(ngModel)]="clientes.nombre" required>
+                            </div>
+                            <div class="input-box">
+                              <span class="details">Dirección</span>
+                              <input type="text" name="direccion" [(ngModel)]="clientes.direccion" required>
+                            </div>
+                            <div class="input-box">
+                              <span class="details">País</span>
+                              <input type="text" name="pais" [(ngModel)]="clientes.pais" required>
+                            </div>
+                            <div class="input-box">
+                              <span class="details">Departamento</span>
+                              <input type="text" name="departamento" [(ngModel)]="clientes.departamento" required>
+                            </div>
+                            <div class="input-box">
+                              <span class="details">Municipio/ciudad</span>
+                              <input type="text" name="ciudad" [(ngModel)]="clientes.ciudad" required>
+                            </div>
+                            <div class="input-box">
+                              <span class="details">Correo</span>
+                              <input type="text" name="correo" [(ngModel)]="clientes.correo" required>
+                            </div>
+                            <div class="input-box">
+                              <span class="details">Teléfono</span>
+                              <input type="text" name="telefono" [(ngModel)]="clientes.telefono" required>
+                            </div>
+                            <div class="input-box">
+                              <span class="details">Contribuyente</span>
+                              <input type="text" name="contribuynete" [(ngModel)]="clientes.contribuyente" required>
+                            </div>
+                            <div class="input-box">
+                              <span class="details">Regimen contable</span>
+                              <input type="text" name="regimen_contable" [(ngModel)]="clientes.regimen_contable" required>
+                            </div>
+                          </div>
+  
+                          <div class="button">
+                              <!--con el update() se redirige a la funcion que esta en nuestro component-->
+                            <button class="button_style" (click)='update()'>Editar</button>                      
+                          </div>
+  
+                          <div class="button2">
+                            <button class="button_style" [routerLink]="['/ver-clientes']">Cancelar</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+  
+                  </div>
+                  <!-- /.container-fluid -->
+  
