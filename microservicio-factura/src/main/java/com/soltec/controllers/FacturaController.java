@@ -42,7 +42,7 @@ public class FacturaController {
 		return factura;
 	}
 	
-	//Listar uno solo 
+	/*//Listar uno solo 
 	@GetMapping("/listar-facturas/{CUFE}")
 	public ResponseEntity<?> obtenerProducto(@PathVariable(value="FacturaService") String CUFE) {
 		Optional<Factura> factura = facturaService.findById(CUFE);
@@ -50,10 +50,13 @@ public class FacturaController {
 			return ResponseEntity.notFound().build();
 		}
 		return ResponseEntity.ok(factura);
-	}
+	}*/
 	//Editar una Factura
 		@PutMapping("/")
 	    public ResponseEntity<?> editar(@RequestBody Factura facturaEditar){
 	        return ResponseEntity.status(HttpStatus.CREATED).body(facturaService.save(facturaEditar));
 	    }
+
+		
+	
 }

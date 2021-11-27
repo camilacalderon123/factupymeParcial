@@ -13,10 +13,7 @@ public interface FacturaService{
 	public Iterable<Factura> findAll(); 
 	
 	public Page<Factura> findAll(Pageable pagebale);
-	
-	public Optional<Factura> findById(String CUFE); 
-	
+		
 	public Factura save(Factura factura);
 	
-	public void deleteById(String CUFE);
 }
