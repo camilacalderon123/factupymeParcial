@@ -1,4 +1,3 @@
-
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -15,35 +14,30 @@
 
                 <div class="input-box">
                     <span class="details">Número de documento</span>
-                    <select class="select_opciones">
-                        <option disabled selected>Buscar...</option>
-                        <option> 1010044500</option>
-                    </select>
-                    <!--<input style="margin-left: 10px;" type="text" name="tipo_documento" required>-->
+                    <input style="margin-left: 13px;" type="number" name="numero_documento" [(ngModel)]="clientes.numero_documento"  required>
                 </div>
-
                 <div class="input-box">
                     <span class="details">Nombre</span>
-                    <input style="margin-left: 13px;" type="text" name="nombre" required>
+                    <input style="margin-left: 13px;" type="text" name="nombre" [(ngModel)]="clientes.nombre" required>
                 </div>
 
                 <div class="input-box">
                     <span class="details">Teléfono</span>
-                    <input style="margin-left: 10px;" type="text" name="telefono" required>
+                    <input style="margin-left: 10px;" type="text" name="telefono" [(ngModel)]="clientes.telefono" required>
                 </div>
 
                 <div class="input-box">
                     <span class="details">Correo</span>
-                    <input style="margin-left: 24px;" type="text" name="correo" required>
+                    <input style="margin-left: 24px;" type="text" name="correo" [(ngModel)]="clientes.correo" required>
                 </div>
 
                 <div class="input-box">
                     <span class="details">Ciudad</span>
-                    <input style="margin-left: 23px;" type="text" name="ciudad" required>
+                    <input style="margin-left: 23px;" type="text" name="ciudad" [(ngModel)]="clientes.ciudad" required>
                 </div>
-                <!--Fin campos del cliente-->    
+                <!--Fin campos del cliente-->
                 <hr>
-                <!--Inicio tabla de agregar los productos-->    
+                <!--Inicio tabla de agregar los productos-->
                 <div class="table-responsive">
                     <table #dataTable class="table table-bordered" id="tablaprueba" width="100%" cellspacing="0">
                         <thead>
@@ -68,19 +62,25 @@
                                 <td>AA</td>
                                 <td>AA</td>
                                 <td>AA</td>
-                                <td>AA</td>                    
+                                <td>AA</td>
                             </tr>
                         </tbody>
                     </table>
                     <div class="form-group">
-                        <button type="button" class="btn btn-edit" onclick="agregarFila()"><i class="fas fa-plus"></i>Agregar fila</button>
-                        <button type="button" class="btn" onclick="eliminarFila()"><i class="fas fa-minus-circle"></i></button>
+                        <button type="button" class="btn btn-edit" onclick="agregarFila()"><i
+                                class="fas fa-plus"></i>Agregar
+                            fila</button>
+                        <button type="button" class="btn" onclick="eliminarFila()"><i
+                                class="fas fa-minus-circle"></i></button>
                     </div>
                 </div>
-                <!--Fin tabla de agregar los productos-->    
+                <!--Fin tabla de agregar los productos-->
                 <div class="button2">
-                    <button class="button_style"  [routerLink]="['/emitirFactura/total']">Siguiente</button>
-                  </div>
+                    <button class="button_style" [routerLink]="['/emitirFactura/total']">Siguiente</button>
+                </div>
+            </form>
+            <form action="#">
+
             </form>
         </div>
     </div>

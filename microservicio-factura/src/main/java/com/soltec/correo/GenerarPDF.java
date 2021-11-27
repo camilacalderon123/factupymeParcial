@@ -1,4 +1,4 @@
-/* package com.soltec.correo;
+package com.soltec.correo;
 
 import com.itextpdf.io.font.FontConstants;
 import com.itextpdf.io.image.ImageData;
@@ -35,14 +35,14 @@ public class GenerarPDF {
 
     }
 
-    public boolean generarPDF(String nombreArchivo, File img, String nombreAnimal ,Usuario us, Factura fa, DetalleFactura df) throws FileNotFoundException, IOException, InterruptedException {
+    public boolean generarPDF(String nombreArchivo, File img, Usuario us, Factura fa, DetalleFactura df) throws FileNotFoundException, IOException, InterruptedException {
 
-        FileOutputStream f = new FileOutputStream(nombreArchivo);
+        FileOutputStream f = new FileOutputStream(nombreArchivo);//nombre pdf
 
         PdfWriter writer = new PdfWriter(f);
         PdfDocument pdfDoc = new PdfDocument(writer);
 
-        Document document = new Document(pdfDoc, PageSize.A4);
+        Document document = new Document(pdfDoc, PageSize.A2);
         document.setMargins(50, 30, 20, 30);
         PdfFont font = PdfFontFactory.createFont(FontConstants.HELVETICA);
         PdfFont font1 = PdfFontFactory.createFont(FontConstants.HELVETICA_BOLD);
@@ -54,7 +54,7 @@ public class GenerarPDF {
         	hue.setFontSize(36f);
         	System.out.println("n");
         	String[] fe=LocalDateTime.now().toString().split("T");
-        	Paragraph factura = new Paragraph("Factura Electrónica de Venta N° "+fa.getRangoNumeracionBean()).setFont(font1);
+        	Paragraph factura = new Paragraph("Factura Electrónica de Venta N° "+fa.getRango_numeracion()).setFont(font1);
         	Paragraph fecha = new Paragraph("Fecha: "+fe[0]+" "+fe[1].substring(0,8)).setFont(font1);
         	Paragraph pTitulo = new Paragraph("Hola, "+us.getNombre() + " "+ us.getApellido()+"\n").setFont(font1);
         	Paragraph pCuerpo = new Paragraph("").setFont(font1);
@@ -64,19 +64,16 @@ public class GenerarPDF {
             ImageData data = ImageDataFactory.create(img.getAbsolutePath());
             Image imga = new Image(data).setFontSize(28f); 
             // Adding paragraphs to document       
-            
-            Table table = new Table(2);
-            //proceso(table, font, document, burbuja, msBuble);
 
-            
             document.add(imga.setTextAlignment(TextAlignment.LEFT));
             document.add(hue);       
             document.add(fecha.setTextAlignment(TextAlignment.RIGHT));
             document.add(pTitulo);
             document.add(pCuerpo.setTextAlignment(TextAlignment.JUSTIFIED));
             document.add(infoUsuario.setTextAlignment(TextAlignment.JUSTIFIED));
-
             document.add(rolUser.setTextAlignment(TextAlignment.JUSTIFIED));
+            tablaProductos(font, document, df);
+            tablaPrecios(font, document, df);
             document.add(despedida.setTextAlignment(TextAlignment.JUSTIFIED));
             document.close();
 
@@ -100,50 +97,56 @@ public class GenerarPDF {
             JOptionPane.showMessageDialog(null, "No se abrirá el PDF");
         }
     }
-<<<<<<< HEAD
-}
-
-=======
     
-    private void tablaProductos(Table tabla, PdfFont font, Document document, DetalleFactura df) {
+    private void tablaProductos(PdfFont font, Document document, DetalleFactura df) {
 
-        tabla = new Table(6);//genera tabla
-        tabla.addHeaderCell("Productos").setBackgroundColor(Color.CYAN);//ENCABEZADO DE TABLA COLOR GRIS
-        tabla.addHeaderCell("Valor Unitario").setBackgroundColor(Color.CYAN);
-        tabla.addHeaderCell("Cantidad").setBackgroundColor(Color.CYAN);
-        tabla.addHeaderCell("Subtotal").setBackgroundColor(Color.CYAN);
-        tabla.addHeaderCell("Descuento").setBackgroundColor(Color.CYAN);
-        tabla.addHeaderCell("Total").setBackgroundColor(Color.CYAN);
-        
+        Table tabla = new Table(6);//genera tabla
+        tabla.addHeaderCell("Codigo del producto").setBackgroundColor(Color.LIGHT_GRAY);//ENCABEZADO DE TABLA COLOR GRIS
+        tabla.addHeaderCell("Nombre");
+        tabla.addHeaderCell("U/M");
+        tabla.addHeaderCell("Valor unitario");
+        tabla.addHeaderCell("% Desc");
+        tabla.addHeaderCell("IVA");
+        String val[] ={"AB12","Zapato","cm","200.000","3%","0%"};
         document.add(tabla);
         tabla.setWidthPercent(90);
-        tabla = new Table(2);
+        tabla = new Table(6);
 
         for (int j = 0; j<6; j++) {
-            //condicionesUso(j, datosBurbujaBi, datosBubleSort, tabla, font);
+        	tabla.addCell(val[j]).setFont(font);
         }
-        cargarTablas(tabla, document);
+        document.add(tabla);
+        tabla.setWidthPercent(50);
     }
     
-    private void condicionesUso(int j, String datosBurbujaBi[], String datosBubleSort[], Table tabla, PdfFont font) {
+    private void tablaPrecios(PdfFont font, Document document, DetalleFactura df) {
 
-       
-        //tabla.addCell("agrega valor").setFont(font).setBackgroundColor(Color.YELLOW);
-        //tabla.addCell("").setFont(font).setBackgroundColor(Color.YELLOW);
+    	document.add(new Paragraph());
+    	document.add(new Paragraph("--------------------------------------------------------------------------------").setWidthPercent(50));
+    	document.add(new Paragraph());
+        @SuppressWarnings("deprecation")
+		Table tabla1 = new Table(1);//genera tabla
+        tabla1.addHeaderCell("MONEDA (COP) PESOS COLOMBIANOS").setBackgroundColor(Color.LIGHT_GRAY);
+        String valores[]= {"Subtotal","Valor neto","Descuento total","IVA","TOTAL"};
+        String val[] ={"12","23","43","87","198"};
+        
+        document.add(tabla1);
+        tabla1.setWidthPercent(50);
+        Table tabla2 = new Table(2);
+
+        for (int j = 0; j<valores.length-1; j++) {
+        	tabla2.addCell(valores[j]).setFont(font);
+        	tabla2.addCell(val[j]).setFont(font);
+        }
+        document.add(tabla2);
+        tabla2.setWidthPercent(50);
+        
+        tabla2 = new Table(2);
+        tabla2.addCell(valores[valores.length-1]).setFont(font).setBackgroundColor(Color.LIGHT_GRAY);
+    	tabla2.addCell(val[val.length-1]).setFont(font);
+    	
+    	document.add(tabla2);
+        tabla2.setWidthPercent(50);
     }
-
-    private void cargarTablas(Table tabla, Document document) {
-        document.add(tabla);
-        tabla.setWidthPercent(90);
-
-        tabla = new Table(2);
-
-        //tabla.addFooterCell("").setBackgroundColor(Color.LIGHT_GRAY);//PIE DE PAGINA DE LA TABLA
-        //tabla.addFooterCell(" " ).setBackgroundColor(Color.LIGHT_GRAY);
-        document.add(tabla);
-        tabla.setWidthPercent(90);
-    }
-
 
 }
-*/

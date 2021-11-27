@@ -33,8 +33,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Opciones</h6>
-                        <a class="collapse-item active" >Ver productos</a>
-                        <a class="collapse-item" href="agregar-producto.html">Agregar producto</a>
+                        <a class="collapse-item active" [routerLink]="['/ver-productos']" >Ver productos</a>
+                        <a class="collapse-item" [routerLink]="['/productos/form']">Agregar producto</a>
                     </div>
                 </div>
             </li>
@@ -70,7 +70,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Opciones</h6>
                         <a class="collapse-item" href="register.html">Ver facturas</a>
-                        <a class="collapse-item" href="login.html">Emitir factura</a>
+                        <a class="collapse-item"  [routerLink]="['/emitirFactura']">Emitir factura</a>
                         <a class="collapse-item" href="register.html">Rangos de numeración</a>
                     </div>
                 </div>

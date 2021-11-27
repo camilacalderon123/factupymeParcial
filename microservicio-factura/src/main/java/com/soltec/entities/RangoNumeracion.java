@@ -20,6 +20,22 @@ public class RangoNumeracion {
 	private int numero_hasta;	
 	private int numero_desde;
 	private String prefijo;
+
+	public RangoNumeracion() {
+		super();
+	}
+	
+	public RangoNumeracion(int id_numeracion, Date fecha_resolucion, int numero_resolucion, int numero_actual,
+			int numero_hasta, int numero_desde, String prefijo) {
+		super();
+		this.id_numeracion = id_numeracion;
+		this.fecha_resolucion = fecha_resolucion;
+		this.numero_resolucion = numero_resolucion;
+		this.numero_actual = numero_actual;
+		this.numero_hasta = numero_hasta;
+		this.numero_desde = numero_desde;
+		this.prefijo = prefijo;
+	}
 	/*private List<Factura> facturas;*/
 	public int getId_numeracion() {
 		return id_numeracion;

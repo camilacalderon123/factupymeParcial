@@ -30,6 +30,20 @@ public class Usuario{
 	public Usuario() {
 	}
 
+	public Usuario(String apellido, String contrasena, String correo, int empresa_NIT, byte estado, String nombre,
+			String rol) {
+		super();
+		this.apellido = apellido;
+		this.contrasena = contrasena;
+		this.correo = correo;
+		this.empresa_NIT = empresa_NIT;
+		this.estado = estado;
+		this.nombre = nombre;
+		this.rol = rol;
+	}
+
+
+
 	public String getApellido() {
 		return this.apellido;
 	}

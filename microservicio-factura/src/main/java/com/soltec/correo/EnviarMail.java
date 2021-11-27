@@ -62,6 +62,7 @@ public class EnviarMail {
             return true;
 
         } catch (Exception e) {
+        	System.out.println("spoa");
             return false;
         }
     }
@@ -73,7 +74,7 @@ public class EnviarMail {
     	System.out.println("a");
         String usuarioCorreo="facturacionpyme123@gmail.com";//correo
         String aux="pyme12345";//contraseña
-        String nombreArchivo = "a.txt";
+        String nombreArchivo = "recibo.txt";
         //String mensaje = "Deseamos hacerle llegar los datos del animal";
         String adjunto = "FACTURACIÓN ELECTRÓNICA";
         File destinoArchivo = new File(nombreArchivo);

@@ -16,6 +16,14 @@ public class DetalleFactura {
 	private String factura_CUFE;
 	private int producto_codigo;
 	private int cantidad;
+
+	public DetalleFactura(int id_detalle, String factura_CUFE, int producto_codigo, int cantidad) {
+		super();
+		this.id_detalle = id_detalle;
+		this.factura_CUFE = factura_CUFE;
+		this.producto_codigo = producto_codigo;
+		this.cantidad = cantidad;
+	}
 	public int getId_detalle() {
 		return id_detalle;
 	}

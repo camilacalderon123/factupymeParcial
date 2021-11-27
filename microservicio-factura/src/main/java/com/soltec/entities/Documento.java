@@ -14,7 +14,14 @@ public class Documento {
 	private String descripcion;	
 	private String archivo_pdf;	
 	private String factura_CUFE;
-	
+
+	public Documento(int id_documentos, String descripcion, String archivo_pdf, String factura_CUFE) {
+		super();
+		this.id_documentos = id_documentos;
+		this.descripcion = descripcion;
+		this.archivo_pdf = archivo_pdf;
+		this.factura_CUFE = factura_CUFE;
+	}
 	public int getId_documentos() {
 		return id_documentos;
 	}

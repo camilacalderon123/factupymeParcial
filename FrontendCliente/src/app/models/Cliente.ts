@@ -1,4 +1,4 @@
-export class Clientes{
+export class Cliente{
     numero_documento:number;
     nombre_comercial:string;
     nombre:string;

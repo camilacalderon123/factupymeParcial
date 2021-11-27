@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ClienteService } from './cliente.service';
-import { Clientes } from './clientes';
+import { ClienteService } from '../service/cliente.service';
+import { Cliente } from '../models/Cliente';
 
 @Component({
   selector: 'app-clientes',
@@ -9,7 +9,7 @@ import { Clientes } from './clientes';
 })
 export class ClientesComponent implements OnInit {
 
-  clientes: Clientes[];
+  clientes: Cliente[];
 
   constructor(private clienteService:ClienteService) { 
 
@@ -21,7 +21,7 @@ export class ClientesComponent implements OnInit {
     );
   }
 
-  delete(clientes:Clientes):void{
+  delete(clientes:Cliente):void{
     console.log("si funciona el delete");
     this.clienteService.delete(clientes.numero_documento).subscribe(
       client => this.clienteService.getAll().subscribe(
