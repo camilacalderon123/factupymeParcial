@@ -1,0 +1,77 @@
+<div class="container-fluid">
+    <h1 class="title_client">Editar producto</h1>
+    <!-- Page Heading -->
+    <div class="card shadow mb-4">
+        <div class="container">
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">
+                            ID producto
+                        </span>
+                        <input  type="text"  name="codigo" [(ngModel)]="producto.codigo" disabled>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <span class="details">
+                            Nombre
+                        </span>
+                        <input type="text" name="nombre" [(ngModel)]="producto.nombre" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <span class="details">
+                            Descripción
+                        </span>
+                        <input type="text" name="descripcion" [(ngModel)]="producto.descripcion" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <span class="details">
+                            Unidad de medida
+                        </span>
+                        <input type="text" name="unidad_medida" [(ngModel)]="producto.unidad_medida" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <span class="details">
+                            Valor unitario
+                        </span>
+                        <input type="text" name="valor_unitario" [(ngModel)]="producto.valor_unitario" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <span class="details">
+                            IVA
+                        </span>
+                        <input type="text" name="iva" [(ngModel)]="producto.iva" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <span class="details">
+                            % Descuento
+                        </span>
+                        <input type="number" name="porcentaje_descuento" [(ngModel)]="producto.porcentaje_descuento"
+                            required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <span class="details">
+                            Estado
+                        </span>
+                        <input type="number" name="estado" [(ngModel)]="producto.estado"
+                            required>
+                    </div>
+                </div>
+                    <div class="button">
+                        <button  class="button_style" (click)='update()'>Actualizar</button>
+                        <!--con el update() se redirige a la funcion que esta en nuestro component-->
+                    </div>
+                    <div class="button2">
+                        <button class="button_style" [routerLink]="['/ver-productos']">Cancelar</button>
+                    </div>
+
+                </form>
+            </div>
+   
+    

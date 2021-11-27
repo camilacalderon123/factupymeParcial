@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ClienteService } from './cliente.service';
-import { Clientes } from './clientes';
+import { ClienteService } from '../service/cliente.service';
+import { Cliente } from '../models/Cliente';
 
 @Component({
   selector: 'app-agregar-cliente',
@@ -10,7 +10,7 @@ import { Clientes } from './clientes';
 })
 export class AgregarClienteComponent implements OnInit {
   
-  clientes:Clientes = new Clientes();
+  clientes:Cliente = new Cliente();
   
   constructor(private clienteService:ClienteService, private router:Router, private activatedRoute:ActivatedRoute) { }
 

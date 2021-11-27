@@ -15,6 +15,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { EditarClienteComponent } from './clientes/editar-cliente.component';
 import { FacturaComponent } from './factura/factura.component';
 import { VerTotalComponent } from './factura/ver-total.component';
+import { ModalComponent } from './factura/modal.component';
+import { ProductoComponent } from './producto/producto.component';
+import { AgregarProductoComponent } from './producto/agregar-producto.component';
+import { EditarProductoComponent } from './producto/editar-producto.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { VerTotalComponent } from './factura/ver-total.component';
     AgregarClienteComponent,
     EditarClienteComponent,
     FacturaComponent,
-    VerTotalComponent
+    VerTotalComponent,
+    ModalComponent,
+    ProductoComponent,
+    AgregarProductoComponent,
+    EditarProductoComponent
   ],
   imports: [
     BrowserModule,
