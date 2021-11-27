@@ -11,49 +11,44 @@ public class DetalleFactura {
 	
 
 	@Id
-	private int idDetalle;
+	private int id_detalle;
 
+	private String factura_CUFE;
+	private int producto_codigo;
 	private int cantidad;
 
-	
-	private Factura factura;
-
-
-	private Producto producto;
-
-	public DetalleFactura() {
+	public DetalleFactura(int id_detalle, String factura_CUFE, int producto_codigo, int cantidad) {
+		super();
+		this.id_detalle = id_detalle;
+		this.factura_CUFE = factura_CUFE;
+		this.producto_codigo = producto_codigo;
+		this.cantidad = cantidad;
 	}
-
-	public int getIdDetalle() {
-		return this.idDetalle;
+	public int getId_detalle() {
+		return id_detalle;
 	}
-
-	public void setIdDetalle(int idDetalle) {
-		this.idDetalle = idDetalle;
+	public void setId_detalle(int id_detalle) {
+		this.id_detalle = id_detalle;
 	}
-
+	public String getFactura_CUFE() {
+		return factura_CUFE;
+	}
+	public void setFactura_CUFE(String factura_CUFE) {
+		this.factura_CUFE = factura_CUFE;
+	}
+	public int getProducto_codigo() {
+		return producto_codigo;
+	}
+	public void setProducto_codigo(int producto_codigo) {
+		this.producto_codigo = producto_codigo;
+	}
 	public int getCantidad() {
-		return this.cantidad;
+		return cantidad;
 	}
-
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
 
-	public Factura getFactura() {
-		return this.factura;
-	}
-
-	public void setFactura(Factura factura) {
-		this.factura = factura;
-	}
-
-	public Producto getProducto() {
-		return this.producto;
-	}
-
-	public void setProducto(Producto producto) {
-		this.producto = producto;
-	}
 
 }
+ 

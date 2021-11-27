@@ -1,6 +1,5 @@
 package com.soltec.entities;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -13,118 +12,74 @@ import javax.persistence.Table;
 public class RangoNumeracion {
 
 	@Id
-	private int idNumeracion;
+	private int id_numeracion;
 
-	private Date fechaResolucion;
-
-	
-	private int numeroActual;
-
-	
-	private int numeroDesde;
-
-	
-	private int numeroHasta;
-
-	
-	private int numeroResolucion;
-
+	private Date fecha_resolucion;
+	private int numero_resolucion;
+	private int numero_actual;
+	private int numero_hasta;	
+	private int numero_desde;
 	private String prefijo;
 
-	private List<Factura> facturas;
-
 	public RangoNumeracion() {
-	}
-
-	public RangoNumeracion(int idNumeracion, Date fechaResolucion, int numeroActual, int numeroDesde, int numeroHasta,
-			int numeroResolucion, String prefijo) {
 		super();
-		this.idNumeracion = idNumeracion;
-		this.fechaResolucion = fechaResolucion;
-		this.numeroActual = numeroActual;
-		this.numeroDesde = numeroDesde;
-		this.numeroHasta = numeroHasta;
-		this.numeroResolucion = numeroResolucion;
+	}
+	
+	public RangoNumeracion(int id_numeracion, Date fecha_resolucion, int numero_resolucion, int numero_actual,
+			int numero_hasta, int numero_desde, String prefijo) {
+		super();
+		this.id_numeracion = id_numeracion;
+		this.fecha_resolucion = fecha_resolucion;
+		this.numero_resolucion = numero_resolucion;
+		this.numero_actual = numero_actual;
+		this.numero_hasta = numero_hasta;
+		this.numero_desde = numero_desde;
 		this.prefijo = prefijo;
-		this.facturas = new ArrayList<>();
 	}
-
-	public int getIdNumeracion() {
-		return this.idNumeracion;
+	/*private List<Factura> facturas;*/
+	public int getId_numeracion() {
+		return id_numeracion;
 	}
-
-	public void setIdNumeracion(int idNumeracion) {
-		this.idNumeracion = idNumeracion;
+	public void setId_numeracion(int id_numeracion) {
+		this.id_numeracion = id_numeracion;
 	}
-
-	public Date getFechaResolucion() {
-		return this.fechaResolucion;
+	public Date getFecha_resolucion() {
+		return fecha_resolucion;
 	}
-
-	public void setFechaResolucion(Date fechaResolucion) {
-		this.fechaResolucion = fechaResolucion;
+	public void setFecha_resolucion(Date fecha_resolucion) {
+		this.fecha_resolucion = fecha_resolucion;
 	}
-
-	public int getNumeroActual() {
-		return this.numeroActual;
+	public int getNumero_resolucion() {
+		return numero_resolucion;
 	}
-
-	public void setNumeroActual(int numeroActual) {
-		this.numeroActual = numeroActual;
+	public void setNumero_resolucion(int numero_resolucion) {
+		this.numero_resolucion = numero_resolucion;
 	}
-
-	public int getNumeroDesde() {
-		return this.numeroDesde;
+	public int getNumero_actual() {
+		return numero_actual;
 	}
-
-	public void setNumeroDesde(int numeroDesde) {
-		this.numeroDesde = numeroDesde;
+	public void setNumero_actual(int numero_actual) {
+		this.numero_actual = numero_actual;
 	}
-
-	public int getNumeroHasta() {
-		return this.numeroHasta;
+	public int getNumero_hasta() {
+		return numero_hasta;
 	}
-
-	public void setNumeroHasta(int numeroHasta) {
-		this.numeroHasta = numeroHasta;
+	public void setNumero_hasta(int numero_hasta) {
+		this.numero_hasta = numero_hasta;
 	}
-
-	public int getNumeroResolucion() {
-		return this.numeroResolucion;
+	public int getNumero_desde() {
+		return numero_desde;
 	}
-
-	public void setNumeroResolucion(int numeroResolucion) {
-		this.numeroResolucion = numeroResolucion;
+	public void setNumero_desde(int numero_desde) {
+		this.numero_desde = numero_desde;
 	}
-
 	public String getPrefijo() {
-		return this.prefijo;
+		return prefijo;
 	}
-
 	public void setPrefijo(String prefijo) {
 		this.prefijo = prefijo;
 	}
 
-	public List<Factura> getFacturas() {
-		return this.facturas;
-	}
-
-	public void setFacturas(List<Factura> facturas) {
-		this.facturas = facturas;
-	}
-
-	public Factura addFactura(Factura factura) {
-		getFacturas().add(factura);
-		factura.setRangoNumeracionBean(this);
-
-		return factura;
-	}
-
-	public Factura removeFactura(Factura factura) {
-		getFacturas().remove(factura);
-		factura.setRangoNumeracionBean(null);
-
-		return factura;
-	}
+	
 
 }

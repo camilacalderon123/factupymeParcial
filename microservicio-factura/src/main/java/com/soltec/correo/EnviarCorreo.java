@@ -8,6 +8,7 @@ import com.soltec.entities.DetalleFactura;
 import com.soltec.entities.Factura;
 import com.soltec.entities.Usuario;
 
+
 public class EnviarCorreo {
 	private Correo correo;
 	private EnviarMail enviar;
@@ -79,3 +80,4 @@ public class EnviarCorreo {
 	}
 
 }
+

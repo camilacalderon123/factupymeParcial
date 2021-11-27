@@ -6,6 +6,11 @@ import { AgregarClienteComponent } from './clientes/agregar-cliente.component';
 import { EditarClienteComponent } from './clientes/editar-cliente.component';
 import { FacturaComponent } from './factura/factura.component';
 import { VerTotalComponent } from './factura/ver-total.component';
+import { ModalComponent } from './factura/modal.component';
+import { ProductoComponent } from './producto/producto.component';
+import { AgregarProductoComponent } from './producto/agregar-producto.component';
+import { EditarProductoComponent } from './producto/editar-producto.component';
+
 
 
 
@@ -14,7 +19,13 @@ const routes:Routes=[
     {path: 'ver-clientes', component:ClientesComponent },
     {path: 'clientes/form', component:AgregarClienteComponent },
     {path: 'clientes/editar/:id', component:EditarClienteComponent },
-    {path: 'emitirFactura', component:FacturaComponent },
+
+    {path: 'ver-productos', component:ProductoComponent },
+    {path: 'productos/form', component:AgregarProductoComponent },
+    {path: 'productos/editar/:codigo', component:EditarProductoComponent },
+
+    {path: 'emitirFactura', component:ModalComponent},
+    {path: 'emitirFactura/datos/:id', component:FacturaComponent },
     {path: 'emitirFactura/total', component:VerTotalComponent},
     {path: '**', redirectTo:'/', pathMatch:'full' } //aca tengo que redireccionarlo al 404
 ]

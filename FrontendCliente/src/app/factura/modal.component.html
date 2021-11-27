@@ -1,0 +1,75 @@
+	                <!-- Begin Page Content -->
+	                <div class="container-fluid">
+	
+                        <!-- Page Heading -->
+                        <h1 class="title_client">Elija el cliente a facturar</h1>
+                        <!-- DataTales Example -->
+                        <div class="card shadow mb-4">
+                            <div class="card-body" >
+                                <div class="table-responsive">
+                                      <table #dataTable class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                          <tr>
+                                            <th>Numero documento</th>
+                                            <th>Nombre comercial</th>
+                                            <th>Nombre</th>
+                                            <th>Pais</th>
+                                            <th>Departamento</th>
+                                            <th>Ciudad</th>
+                                            <th>Direccion</th>
+                                            <th>Correo</th>
+                                            <th>Telefono</th>
+                                            <th>Contribuyente</th>
+                                            <th>Regimen contable</th>
+                                            <th>tipo de documento</th>
+                                            <th>Seleccionar</th>
+                                          </tr>
+                                        </thead>
+                                        <tfoot>
+                                          <tr>
+                                            <th>Numero documento</th>
+                                            <th>Nombre comercial</th>
+                                            <th>Nombre</th>
+                                            <th>Pais</th>
+                                            <th>Departamento</th>
+                                            <th>Ciudad</th>
+                                            <th>Direccion</th>
+                                            <th>Correo</th>
+                                            <th>Telefono</th>
+                                            <th>Contribuyente</th>
+                                            <th>Regimen contable</th>
+                                            <th>tipo de documento</th>
+                                            <th>Seleccionar</th>
+                                          </tr>
+                                      </tfoot>                          
+                                       <tbody>
+                                          <tr *ngFor="let cliente of clientes" >
+                                            <td>{{cliente.numero_documento}}</td>
+                                            <td>{{cliente.nombre_comercial}}</td>
+                                            <td>{{cliente.nombre}}</td>
+                                            <td>{{cliente.pais}} </td>
+                                            <td>{{cliente.departamento}}</td>
+                                            <td>{{cliente.ciudad}}</td>
+                                            <td>{{cliente.direccion}}</td>
+                                            <td>{{cliente.correo}}</td>
+                                            <td>{{cliente.telefono}}</td>
+                                            <td>{{cliente.contribuyente}}</td>
+                                            <td>{{cliente.regimen_contable}}</td>					            	       					            	    
+                                            <td>{{cliente.tipo_documento}}</td>    
+                                            <td>
+                                              <button class="btn boton-accion" [routerLink]="['/emitirFactura/datos', cliente.numero_documento]" >
+                                                <i class="fas fa-plus-circle" style="color: rgb(94, 94, 243);"></i>
+                                              </button>                                         
+                                            </td> 
+                                         </tr>     
+                                        </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <!-- /.container-fluid -->
+    
+    
+    

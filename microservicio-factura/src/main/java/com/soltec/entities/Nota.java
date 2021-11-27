@@ -9,50 +9,48 @@ import javax.persistence.Table;
 @Table(name = "notas")
 public class Nota {
 	@Id
-	private int idNota;
+	private int id_nota;
 
-
-	private String descripcion;
-
+	private String descripcion;	
+	private String mensaje;	
+	private String factura_CUFE;
 	
-	private String mensaje;
-
-	
-	private Factura factura;
-
 	public Nota() {
+		super();
 	}
 
-	public int getIdNota() {
-		return this.idNota;
+	public Nota(int id_nota, String descripcion, String mensaje, String factura_CUFE) {
+		super();
+		this.id_nota = id_nota;
+		this.descripcion = descripcion;
+		this.mensaje = mensaje;
+		this.factura_CUFE = factura_CUFE;
 	}
-
-	public void setIdNota(int idNota) {
-		this.idNota = idNota;
+	
+	public int getId_nota() {
+		return id_nota;
 	}
-
+	public void setId_nota(int id_nota) {
+		this.id_nota = id_nota;
+	}
 	public String getDescripcion() {
-		return this.descripcion;
+		return descripcion;
 	}
-
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-
 	public String getMensaje() {
-		return this.mensaje;
+		return mensaje;
 	}
-
 	public void setMensaje(String mensaje) {
 		this.mensaje = mensaje;
 	}
-
-	public Factura getFactura() {
-		return this.factura;
+	public String getFactura_CUFE() {
+		return factura_CUFE;
+	}
+	public void setFactura_CUFE(String factura_CUFE) {
+		this.factura_CUFE = factura_CUFE;
 	}
 
-	public void setFactura(Factura factura) {
-		this.factura = factura;
-	}
 
 }

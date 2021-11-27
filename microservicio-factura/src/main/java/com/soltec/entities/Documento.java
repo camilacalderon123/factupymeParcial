@@ -8,51 +8,43 @@ import javax.persistence.Table;
 @Table(name = "documentos")
 public class Documento {
 	
-
 	@Id
-	private int idDocumentos;
-
+	private int id_documentos;
 	
-	private String archivoPdf;
+	private String descripcion;	
+	private String archivo_pdf;	
+	private String factura_CUFE;
 
-	
-	private String descripcion;
-
-	
-	private Factura factura;
-
-	public Documento() {
+	public Documento(int id_documentos, String descripcion, String archivo_pdf, String factura_CUFE) {
+		super();
+		this.id_documentos = id_documentos;
+		this.descripcion = descripcion;
+		this.archivo_pdf = archivo_pdf;
+		this.factura_CUFE = factura_CUFE;
 	}
-
-	public int getIdDocumentos() {
-		return this.idDocumentos;
+	public int getId_documentos() {
+		return id_documentos;
 	}
-
-	public void setIdDocumentos(int idDocumentos) {
-		this.idDocumentos = idDocumentos;
+	public void setId_documentos(int id_documentos) {
+		this.id_documentos = id_documentos;
 	}
-
-	public String getArchivoPdf() {
-		return this.archivoPdf;
-	}
-
-	public void setArchivoPdf(String archivoPdf) {
-		this.archivoPdf = archivoPdf;
-	}
-
 	public String getDescripcion() {
-		return this.descripcion;
+		return descripcion;
 	}
-
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-
-	public Factura getFactura() {
-		return this.factura;
+	public String getArchivo_pdf() {
+		return archivo_pdf;
 	}
-
-	public void setFactura(Factura factura) {
-		this.factura = factura;
+	public void setArchivo_pdf(String archivo_pdf) {
+		this.archivo_pdf = archivo_pdf;
 	}
+	public String getFactura_CUFE() {
+		return factura_CUFE;
+	}
+	public void setFactura_CUFE(String factura_CUFE) {
+		this.factura_CUFE = factura_CUFE;
+	}
+	
 }

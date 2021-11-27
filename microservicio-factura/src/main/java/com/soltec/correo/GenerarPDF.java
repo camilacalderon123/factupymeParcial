@@ -54,7 +54,7 @@ public class GenerarPDF {
         	hue.setFontSize(36f);
         	System.out.println("n");
         	String[] fe=LocalDateTime.now().toString().split("T");
-        	Paragraph factura = new Paragraph("Factura Electrónica de Venta N° "+fa.getRangoNumeracionBean()).setFont(font1);
+        	Paragraph factura = new Paragraph("Factura Electrónica de Venta N° "+fa.getRango_numeracion()).setFont(font1);
         	Paragraph fecha = new Paragraph("Fecha: "+fe[0]+" "+fe[1].substring(0,8)).setFont(font1);
         	Paragraph pTitulo = new Paragraph("Hola, "+us.getNombre() + " "+ us.getApellido()+"\n").setFont(font1);
         	Paragraph pCuerpo = new Paragraph("").setFont(font1);
