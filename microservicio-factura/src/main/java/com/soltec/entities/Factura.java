@@ -1,5 +1,6 @@
 package com.soltec.entities;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -52,6 +53,24 @@ public class Factura {
 	private List<Nota> notas;
 
 	public Factura() {
+	}
+
+	public Factura(String cufe, byte estado, Date fechaExpedicion, Date fechaVencimiento, String firma,
+			double totalDescuento, double valorNeto, Cliente cliente, Empresa empresa, RangoNumeracion rangoNumeracionBean) {
+		super();
+		this.cufe = cufe;
+		this.estado = estado;
+		this.fechaExpedicion = fechaExpedicion;
+		this.fechaVencimiento = fechaVencimiento;
+		this.firma = firma;
+		this.totalDescuento = totalDescuento;
+		this.valorNeto = valorNeto;
+		this.detalleFacturas = new ArrayList<>();
+		this.documentos = new ArrayList<>();
+		this.cliente = cliente;
+		this.empresa = empresa;
+		this.rangoNumeracionBean = rangoNumeracionBean;
+		this.notas = new ArrayList<>();
 	}
 
 	public String getCufe() {
