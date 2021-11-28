@@ -6,13 +6,18 @@ import { ProductoComponent } from "./producto/producto.component";
 import { VerProductosComponent } from "./producto/ver-productos.component";
 import { CommonModule } from '@angular/common';
 import { EditarProductoComponent } from "./producto/editar-producto.component";
+import { RangoNumeracionComponent } from './rango-numeracion/rango-numeracion.component';
+import { AgregarRangoNumeracionComponent } from './rango-numeracion/agregar-rango-numeracion.component';
+
 
 //Aquí tengo mis rutas
 const app_routes: Routes = [
     {path: '', redirectTo:'/ver-productos',pathMatch:'full' },
     {path:'ver-productos', component:ProductoComponent},
     {path:'agregar', component:AgregarProductoComponent},
-    {path:'editar/:codigo', component:EditarProductoComponent}
+    {path:'editar/:codigo', component:EditarProductoComponent},
+    {path:'ver-rangos', component:RangoNumeracionComponent},
+    {path:'agregar-rangos', component:AgregarRangoNumeracionComponent}
     //Ponemos pathMatch full para asegurarnos de que funcione mejor
     //{path:'**', redirectTo:''}
 ];

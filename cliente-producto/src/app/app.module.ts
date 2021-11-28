@@ -14,6 +14,8 @@ import { AgregarProductoComponent } from './producto/agregar-producto.component'
 import { EditarProductoComponent } from './producto/editar-producto.component';
 //Rutas
 import { AppRoutingModule } from './app-routing.module';
+import { RangoNumeracionComponent } from './rango-numeracion/rango-numeracion.component';
+import { AgregarRangoNumeracionComponent } from './rango-numeracion/agregar-rango-numeracion.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     VerProductosComponent,
     AgregarProductoComponent,
-    EditarProductoComponent
+    EditarProductoComponent,
+    RangoNumeracionComponent,
+    AgregarRangoNumeracionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,47 @@
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="title_client">Agregar rango de numeración</h1>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+       <div class="card-body">
+         <form action="#">
+           <div class="user-details">
+            <div class="input-box">
+                <span class="details">id_numeracion</span>
+                <input type="text" name="id_numeracion" [(ngModel)]="rangoNumeracion.id_numeracion"required>
+            </div>
+            <div class="input-box">
+                <span class="details">Prefjio</span>
+                <input type="text" name="prefijo" [(ngModel)]="rangoNumeracion.prefijo"required>
+            </div>
+                <div class="input-box">
+                    <span class="details">Número desde</span>
+                    <input type="text" name="numero_desde" [(ngModel)]="rangoNumeracion.numero_desde"required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Número hasta</span>
+                    <input type="text" name="numero_hasta" [(ngModel)]="rangoNumeracion.numero_hasta"required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Número actual</span>
+                    <input type="text" name="numero_actual" [(ngModel)]="rangoNumeracion.numero_actual"required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Número de resolución</span>
+                    <input type="text" name="numero_resolucion" [(ngModel)]="rangoNumeracion.numero_resolucion"required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Fecha de resolución</span>
+                    <input type="text" name="fecha_resolucion" [(ngModel)]="rangoNumeracion.fecha_resolucion"required>
+                </div> 
+                </div>
+                <div class="buttom">
+                    <button class="button_style" (click)='createR()'>Guardar</button>
+                </div>
+                <div class="buttom2">
+                    <button class="button_style" [routerLink]="['/ver-rangos']">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>

@@ -1,0 +1,41 @@
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="title_client">Rangos de numeración</h1>
+    <div class="buttom2">
+        <a  [routerLink]="['/agregar-rangos']">Agregar</a> 
+    </div>
+    <br>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Numeracion</th>
+                            <th>Fecha resolucion</th>
+                            <th>Número resolucion</th>
+                            <th>Número actual</th>
+                            <th>Número hasta</th>
+                            <th>Número desde</th>
+                            <th>Prefijo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let rangoNumeracion of rangosNumeracion">
+                            <td>{{rangoNumeracion.id_numeracion}}</td>
+                            <td>{{rangoNumeracion.fecha_resolucion}}</td>
+                            <td>{{rangoNumeracion.numero_resolucion}}</td>
+                            <td>{{rangoNumeracion.numero_actual}}</td>
+                            <td>{{rangoNumeracion.numero_hasta}}</td>
+                            <td>{{rangoNumeracion.numero_desde}}</td>
+                            <td>{{rangoNumeracion.prefijo}}</td>
+                        </tr>   
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
