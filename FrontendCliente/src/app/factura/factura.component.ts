@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Cliente } from '../models/Cliente';
 import { ClienteService } from '../service/cliente.service';
+import { Producto } from '../models/Producto';
+import { ProductoServiceService } from '../service/producto-service.service';
 
 
 @Component({
@@ -11,13 +13,19 @@ import { ClienteService } from '../service/cliente.service';
 })
 export class FacturaComponent implements OnInit {
   clientes:Cliente = new Cliente();
+  productos: Producto[];
   
-  constructor(private clienteService:ClienteService,private router:Router, private activatedRoute:ActivatedRoute) { }
+  constructor(private clienteService:ClienteService, private productoService:ProductoServiceService,private router:Router, private activatedRoute:ActivatedRoute) { }
   
 
   ngOnInit(): void {
+    this.productoService.getAll().subscribe(
+      product=>this.productos = product
+    );
+
     this.traerCliente();
   }
+
   traerCliente():void{
     this.activatedRoute.params.subscribe(
       c =>{

@@ -55,7 +55,7 @@
                                 <td>
                                     <select class="select_opciones">
                                         <option disabled selected>Buscar...</option>
-                                        <option>A50</option>
+                                        <option *ngFor="let producto of productos">{{producto.codigo}}</option>
                                     </select>
                                 </td>
                                 <td>AA</td>
