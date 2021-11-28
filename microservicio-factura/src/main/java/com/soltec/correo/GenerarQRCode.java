@@ -1,5 +1,6 @@
 package com.soltec.correo;
 
+import java.io.File;
 import java.nio.file.Paths;
 
 import com.google.zxing.BarcodeFormat;
@@ -11,9 +12,15 @@ public class GenerarQRCode {
 	
 	public GenerarQRCode() throws Exception {
 		QRCode qrCode = new QRCode();
+		qrCode.setData("https://divisist2.ufps.edu.co/");
+		qrCode.setHeight(250);
+		qrCode.setSize(250);
+		qrCode.setFormato("png");
+		File f =new File("QR.png");
+		qrCode.setPath(f.getAbsolutePath());
 		BitMatrix matrix= new MultiFormatWriter().encode(qrCode.getData(),BarcodeFormat.QR_CODE,qrCode.getHeight(),qrCode.getSize());
 		//Formato de la imagen y la ruta
-		MatrixToImageWriter.writeToPath(matrix, "jpg", Paths.get(qrCode.getPath()));
+		MatrixToImageWriter.writeToPath(matrix, qrCode.getFormato(), Paths.get(qrCode.getPath()));
 	}
 }
 

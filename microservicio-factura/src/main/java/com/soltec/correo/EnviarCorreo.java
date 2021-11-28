@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import com.soltec.entities.Cliente;
 import com.soltec.entities.DetalleFactura;
 import com.soltec.entities.Factura;
 import com.soltec.entities.Usuario;
@@ -26,13 +27,12 @@ public class EnviarCorreo {
 		this.generarPDF = generarPDF;
 	}
 
-	public boolean enviarCorreo(String nombreArchivo, File img, Usuario us, Factura factura, DetalleFactura df) {
+	public boolean enviarCorreo(String nombreArchivo, File img, Cliente cl, Factura factura, DetalleFactura df) {
 
 		boolean creado = false;
 		boolean enviado = false;
 
-		String saludo = "Estimado(a) " + us.getNombre() + " " + us.getApellido()
-				+ ", ha recibido un DOCUMENTO ELECTRÓNICO por parte de SolTec 2.0.\r\n"
+		String saludo = "Estimado(a) " + cl.getNombre() + ", ha recibido un DOCUMENTO ELECTRÓNICO por parte de SolTec 2.0.\r\n"
 				+ "Envío que se efectúa mediante los sistemas de Facturación Electrónica del Proveedor Tecnológico SolTec, "
 				+ "autorizado bajo la resolución DIAN 000413 del 18 Enero del 2019.";
 		
@@ -51,9 +51,9 @@ public class EnviarCorreo {
 
 		try {
 			correo = new Correo("facturacionpyme123@gmail.com", nombreArchivo, nombreArchivo, "pyme12345", "", "",
-					us.getCorreo(), "¡Hola! \n\n" + saludo +"\n\n" + datosArchivos + "\n\n" + solicitudes, factura.getCUFE()+";Factura electrónica;SOLTEC 2.0");
+					cl.getCorreo(), "¡Hola! \n\n" + saludo +"\n\n" + datosArchivos + "\n\n" + solicitudes, factura.getCUFE()+";Factura electrónica;SOLTEC 2.0");
 
-			creado = generarPDF.generarPDF(nombreArchivo, img, us, factura, df);
+			creado = generarPDF.generarPDF(nombreArchivo, img, cl, factura, df);
 
 			correo.setRutaArchivo(new File(nombreArchivo).toString());
 			correo.setRutaArchivo1(new File("recibo.xml").toString());

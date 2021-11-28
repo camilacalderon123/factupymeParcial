@@ -14,6 +14,7 @@ import com.itextpdf.layout.element.Image;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
 import com.itextpdf.layout.property.TextAlignment;
+import com.soltec.entities.Cliente;
 import com.soltec.entities.DetalleFactura;
 import com.soltec.entities.Factura;
 import com.soltec.entities.Usuario;
@@ -35,14 +36,14 @@ public class GenerarPDF {
 
     }
 
-    public boolean generarPDF(String nombreArchivo, File img, Usuario us, Factura fa, DetalleFactura df) throws FileNotFoundException, IOException, InterruptedException {
+    public boolean generarPDF(String nombreArchivo, File img, Cliente cl, Factura fa, DetalleFactura df) throws FileNotFoundException, IOException, InterruptedException {
 
         FileOutputStream f = new FileOutputStream(nombreArchivo);//nombre pdf
 
         PdfWriter writer = new PdfWriter(f);
         PdfDocument pdfDoc = new PdfDocument(writer);
 
-        Document document = new Document(pdfDoc, PageSize.A2);
+        Document document = new Document(pdfDoc, PageSize.A3);
         document.setMargins(50, 30, 20, 30);
         PdfFont font = PdfFontFactory.createFont(FontConstants.HELVETICA);
         PdfFont font1 = PdfFontFactory.createFont(FontConstants.HELVETICA_BOLD);
@@ -51,29 +52,47 @@ public class GenerarPDF {
         	System.out.println("a");
         	Paragraph hue = new Paragraph("Facturación Electrónica - SolTec").setFont(font1);
         	hue.setTextAlignment(TextAlignment.CENTER);
-        	hue.setFontSize(36f);
+        	hue.setFontSize(26f);
         	System.out.println("n");
         	String[] fe=LocalDateTime.now().toString().split("T");
         	Paragraph factura = new Paragraph("Factura Electrónica de Venta N° "+fa.getRango_numeracion()).setFont(font1);
         	Paragraph fecha = new Paragraph("Fecha: "+fe[0]+" "+fe[1].substring(0,8)).setFont(font1);
-        	Paragraph pTitulo = new Paragraph("Hola, "+us.getNombre() + " "+ us.getApellido()+"\n").setFont(font1);
         	Paragraph pCuerpo = new Paragraph("").setFont(font1);
-            Paragraph infoUsuario = new Paragraph("Nombre de usuario: "+"-----------"+"\nContraseña: "+"---------------------").setFont(font1);
-            Paragraph rolUser = new Paragraph("También se le hace saber que el usuario y usted pertenecen al rol de "+'"'+us.getRol()+'"'+", favor tener en cuenta lo anterior.").setFont(font);
+            Paragraph infoUsuario = new Paragraph("Nombre: ").setFont(font1);
+            Paragraph nombre = new Paragraph(cl.getNombre()).setFont(font);
+            Paragraph dir = new Paragraph("Dirección: ").setFont(font1);
+            Paragraph direccion = new Paragraph(cl.getDireccion()).setFont(font);
+            Paragraph c = new Paragraph("Ciudad: ").setFont(font1);
+            Paragraph ciudad = new Paragraph(cl.getCiudad()).setFont(font);
+            Paragraph CU = new Paragraph("CUFE: ").setFont(font1);
+            Paragraph CUFE = new Paragraph(fa.getCUFE());
             Paragraph despedida = new Paragraph("").setFont(font1);
+            
+            document.add(hue); 
+            GenerarQRCode gc = new GenerarQRCode();
+            
             ImageData data = ImageDataFactory.create(img.getAbsolutePath());
             Image imga = new Image(data).setFontSize(28f); 
             // Adding paragraphs to document       
 
-            document.add(imga.setTextAlignment(TextAlignment.LEFT));
-            document.add(hue);       
+            document.add(imga.setFixedPosition(30, 1000));
+            ImageData data1 = ImageDataFactory.create(new File("QR.png").getAbsolutePath());
+            document.add(new Image(data1).setFixedPosition(500,750));
+            document.add(CU.setTextAlignment(TextAlignment.RIGHT));
+            document.add(CUFE.setTextAlignment(TextAlignment.RIGHT));
             document.add(fecha.setTextAlignment(TextAlignment.RIGHT));
-            document.add(pTitulo);
             document.add(pCuerpo.setTextAlignment(TextAlignment.JUSTIFIED));
             document.add(infoUsuario.setTextAlignment(TextAlignment.JUSTIFIED));
-            document.add(rolUser.setTextAlignment(TextAlignment.JUSTIFIED));
+            document.add(nombre.setTextAlignment(TextAlignment.JUSTIFIED));
+            document.add(dir.setTextAlignment(TextAlignment.JUSTIFIED));
+            document.add(direccion.setTextAlignment(TextAlignment.JUSTIFIED));
+            document.add(c.setTextAlignment(TextAlignment.JUSTIFIED));
+            document.add(ciudad.setTextAlignment(TextAlignment.JUSTIFIED));
+            
             tablaProductos(font, document, df);
             tablaPrecios(font, document, df);
+            
+            
             document.add(despedida.setTextAlignment(TextAlignment.JUSTIFIED));
             document.close();
 

@@ -29,6 +29,28 @@ public class Cliente {
 	private String regimen_contable;
 	private int tipo_documento;
 	
+	public Cliente() {
+		
+	}
+	
+	public Cliente(Integer numero_documento, String nombre_comercial, String nombre, String pais, String departamento,
+			String ciudad, String direccion, String correo, String telefono, String contribuyente,
+			String regimen_contable, int tipo_documento) {
+		super();
+		this.numero_documento = numero_documento;
+		this.nombre_comercial = nombre_comercial;
+		this.nombre = nombre;
+		this.pais = pais;
+		this.departamento = departamento;
+		this.ciudad = ciudad;
+		this.direccion = direccion;
+		this.correo = correo;
+		this.telefono = telefono;
+		this.contribuyente = contribuyente;
+		this.regimen_contable = regimen_contable;
+		this.tipo_documento = tipo_documento;
+	}
+	
 	public Integer getNumero_documento() {
 		return numero_documento;
 	}
