@@ -19,6 +19,10 @@ import { ModalComponent } from './factura/modal.component';
 import { ProductoComponent } from './producto/producto.component';
 import { AgregarProductoComponent } from './producto/agregar-producto.component';
 import { EditarProductoComponent } from './producto/editar-producto.component';
+import { RangoNumeracionComponent } from './rango-numeracion/rango-numeracion.component';
+import { AgregarRangoComponent } from './rango-numeracion/agregar-rango.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { EmpresaComponent } from './empresa/empresa.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { EditarProductoComponent } from './producto/editar-producto.component';
     ModalComponent,
     ProductoComponent,
     AgregarProductoComponent,
-    EditarProductoComponent
+    EditarProductoComponent,
+    RangoNumeracionComponent,
+    AgregarRangoComponent,
+    InicioComponent,
+    EmpresaComponent
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,7 @@
 
             <!-- Opcion inicio -->
             <li class="nav-item">
-                <a class="nav-link" href="inicioapp.html">
+                <a class="nav-link"  [routerLink]="['/inicio']">
                     <i class="fas fa-home"></i>
                     <span>Inicio</span></a>
             </li>
@@ -71,7 +71,7 @@
                         <h6 class="collapse-header">Opciones</h6>
                         <a class="collapse-item" href="register.html">Ver facturas</a>
                         <a class="collapse-item"  [routerLink]="['/emitirFactura']">Emitir factura</a>
-                        <a class="collapse-item" href="register.html">Rangos de numeración</a>
+                        <a class="collapse-item"[routerLink]="['/ver-rangos']"  >Rangos de numeración</a>
                     </div>
                 </div>
             </li>
