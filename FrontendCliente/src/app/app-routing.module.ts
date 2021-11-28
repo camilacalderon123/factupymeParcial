@@ -10,12 +10,16 @@ import { ModalComponent } from './factura/modal.component';
 import { ProductoComponent } from './producto/producto.component';
 import { AgregarProductoComponent } from './producto/agregar-producto.component';
 import { EditarProductoComponent } from './producto/editar-producto.component';
+import { RangoNumeracionComponent } from './rango-numeracion/rango-numeracion.component';
+import { AgregarRangoComponent } from './rango-numeracion/agregar-rango.component';
+import { InicioComponent } from './inicio/inicio.component';
+
 
 
 
 
 const routes:Routes=[
-    {path: '', redirectTo:'/ver-clientes',pathMatch:'full' },
+    {path: '', redirectTo:'/inicio',pathMatch:'full' },
     {path: 'ver-clientes', component:ClientesComponent },
     {path: 'clientes/form', component:AgregarClienteComponent },
     {path: 'clientes/editar/:id', component:EditarClienteComponent },
@@ -23,6 +27,11 @@ const routes:Routes=[
     {path: 'ver-productos', component:ProductoComponent },
     {path: 'productos/form', component:AgregarProductoComponent },
     {path: 'productos/editar/:codigo', component:EditarProductoComponent },
+
+    {path: 'ver-rangos', component: RangoNumeracionComponent},
+    {path: 'rangos/form', component: AgregarRangoComponent},
+
+    {path: 'inicio', component: InicioComponent},
 
     {path: 'emitirFactura', component:ModalComponent},
     {path: 'emitirFactura/datos/:id', component:FacturaComponent },
