@@ -1,8 +1,9 @@
 package com.soltec.entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
-	import javax.persistence.Entity;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -22,6 +23,23 @@ public class Factura {
 	private int empresa_NIT;
 	private int rango_numeracion;
 	private int cliente_numero_documento;
+	
+
+	public Factura(String cUFE, Date fecha_expedicion, Date fecha_vencimiento, double valor_neto,
+			double total_descuento, byte estado, String firma, int empresa_NIT, int rango_numeracion,
+			int cliente_numero_documento) {
+		super();
+		CUFE = cUFE;
+		this.fecha_expedicion = fecha_expedicion;
+		this.fecha_vencimiento = fecha_vencimiento;
+		this.valor_neto = valor_neto;
+		this.total_descuento = total_descuento;
+		this.estado = estado;
+		this.firma = firma;
+		this.empresa_NIT = empresa_NIT;
+		this.rango_numeracion = rango_numeracion;
+		this.cliente_numero_documento = cliente_numero_documento;
+	}
 	/*private RangoNumeracion rangoNumeracionBean;*/
 	public String getCUFE() {
 		return CUFE;
@@ -85,14 +103,16 @@ public class Factura {
 	}
 	
 	
+	public String convertirFecha(Date fecha) {
+		SimpleDateFormat formatter = new SimpleDateFormat("YYYYmmddHHMMss");
+		return formatter.format(fecha);
+	}
+	
 	/*private List<DetalleFactura> detalleFacturas;
-
 	
 	private List<Documento> documentos;
-
 	
 	private Cliente cliente;
-
 	
 	private Empresa empresa;*/
 
@@ -104,59 +124,44 @@ public class Factura {
 	/*public List<DetalleFactura> getDetalleFacturas() {
 		return this.detalleFacturas;
 	}
-
 	public void setDetalleFacturas(List<DetalleFactura> detalleFacturas) {
 		this.detalleFacturas = detalleFacturas;
 	}
-
 	public DetalleFactura addDetalleFactura(DetalleFactura detalleFactura) {
 		getDetalleFacturas().add(detalleFactura);
 		detalleFactura.setFactura(this);
-
 		return detalleFactura;
 	}
-
 	public DetalleFactura removeDetalleFactura(DetalleFactura detalleFactura) {
 		getDetalleFacturas().remove(detalleFactura);
 		detalleFactura.setFactura(null);
-
 		return detalleFactura;
 	}
-
 	public List<Documento> getDocumentos() {
 		return this.documentos;
 	}
-
 	public void setDocumentos(List<Documento> documentos) {
 		this.documentos = documentos;
 	}
-
 	public Documento addDocumento(Documento documento) {
 		getDocumentos().add(documento);
 		documento.setFactura(this);
-
 		return documento;
 	}
-
 	public Documento removeDocumento(Documento documento) {
 		getDocumentos().remove(documento);
 		documento.setFactura(null);
-
 		return documento;
 	}
-
 	public Cliente getCliente() {
 		return this.cliente;
 	}
-
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
-
 	public Empresa getEmpresa() {
 		return this.empresa;
 	}
-
 	public void setEmpresa(Empresa empresa) {
 		this.empresa = empresa;
 	}*/
