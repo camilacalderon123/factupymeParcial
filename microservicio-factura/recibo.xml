@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pdf2xml pages="1">
+  <title />
+  <page width="1190" height="1684">
+    <text x="0" y="0" width="0" height="0" />
+    <img x="30" y="50" width="306" height="155" src="recibo_pic1.png" />
+    <font size="36" face="VEWGDS+Helvetica-Bold" src="recibo_font1.ttf">
+      <text x="315.91" y="247.01" width="204.042" height="40.219">Facturación</text>
+      <text x="529.966" y="247.01" width="194.081" height="40.219">Electrónica</text>
+      <text x="734.05" y="247.01" width="11.988" height="40.219">-</text>
+      <text x="756.046" y="247.01" width="118.049" height="40.219">SolTec</text>
+    </font>
+    <font size="12" face="VEWGDS+Helvetica-Bold" src="recibo_font1.ttf">
+      <text x="1005.26" y="283.62" width="38.676" height="13.406">Fecha:</text>
+      <text x="1047.272" y="283.62" width="61.37" height="13.406">2021-11-27</text>
+      <text x="1111.976" y="283.62" width="48.026" height="13.406">20:38:05</text>
+      <text x="30" y="309.6" width="29.338" height="13.406">Hola,</text>
+      <text x="62.676" y="309.6" width="55.354" height="13.406">sebastian</text>
+      <text x="121.368" y="309.6" width="47.352" height="13.406">sanchez</text>
+      <text x="30" y="343.58" width="45.338" height="13.406">Nombre</text>
+      <text x="78.672" y="343.58" width="14.006" height="13.406">de</text>
+      <text x="96.012" y="343.58" width="47.34" height="13.406">usuario:</text>
+      <text x="146.688" y="343.58" width="43.956" height="13.406">-----------</text>
+      <text x="30" y="361.56" width="70.008" height="13.406">Contraseña:</text>
+      <text x="103.344" y="361.56" width="83.916" height="13.406">---------------------</text>
+    </font>
+    <font size="12" face="EKFIOI+Helvetica" src="recibo_font2.ttf">
+      <text x="30" y="387.54" width="46.682" height="13.406">También</text>
+      <text x="80.016" y="387.54" width="12.674" height="13.406">se</text>
+      <text x="96.024" y="387.54" width="9.338" height="13.406">le</text>
+      <text x="108.696" y="387.54" width="26.018" height="13.406">hace</text>
+      <text x="138.048" y="387.54" width="30.012" height="13.406">saber</text>
+      <text x="171.396" y="387.54" width="20.018" height="13.406">que</text>
+      <text x="194.748" y="387.54" width="9.338" height="13.406">el</text>
+      <text x="207.42" y="387.54" width="39.35" height="13.406">usuario</text>
+      <text x="250.104" y="387.54" width="6" height="13.406">y</text>
+      <text x="259.44" y="387.54" width="29.354" height="13.406">usted</text>
+      <text x="292.128" y="387.54" width="60.038" height="13.406">pertenecen</text>
+      <text x="355.5" y="387.54" width="9.338" height="13.406">al</text>
+      <text x="368.172" y="387.54" width="13.334" height="13.406">rol</text>
+      <text x="384.84" y="387.54" width="13.346" height="13.406">de</text>
+      <text x="401.52" y="387.54" width="85.87" height="13.406">"Administrador",</text>
+      <text x="490.728" y="387.54" width="26.676" height="13.406">favor</text>
+      <text x="520.74" y="387.54" width="27.348" height="13.406">tener</text>
+      <text x="551.424" y="387.54" width="13.346" height="13.406">en</text>
+      <text x="568.104" y="387.54" width="36.026" height="13.406">cuenta</text>
+      <text x="607.464" y="387.54" width="9.338" height="13.406">lo</text>
+      <text x="620.136" y="387.54" width="44.014" height="13.406">anterior.</text>
+    </font>
+    <font size="12" face="KMGWTR+Helvetica" src="recibo_font3.ttf">
+      <text x="32.5" y="412.03" width="38.018" height="13.406">Codigo</text>
+      <text x="73.852" y="412.03" width="16.01" height="13.406">del</text>
+      <text x="93.196" y="412.03" width="46.694" height="13.406">producto</text>
+      <text x="220.75" y="412.03" width="42.674" height="13.406">Nombre</text>
+      <text x="409" y="412.03" width="21.996" height="13.406">U/M</text>
+      <text x="597.25" y="412.03" width="28.008" height="13.406">Valor</text>
+      <text x="628.594" y="412.03" width="39.35" height="13.406">unitario</text>
+      <text x="785.5" y="412.03" width="10.67" height="13.406">%</text>
+      <text x="799.504" y="412.03" width="27.336" height="13.406">Desc</text>
+      <text x="973.75" y="412.03" width="19.344" height="13.406">IVA</text>
+    </font>
+    <font size="12" face="EKFIOI+Helvetica" src="recibo_font2.ttf">
+      <text x="32.5" y="435.01" width="29.354" height="13.406">AB12</text>
+      <text x="220.75" y="435.01" width="37.358" height="13.406">Zapato</text>
+      <text x="409" y="435.01" width="15.996" height="13.406">cm</text>
+      <text x="597.25" y="435.01" width="43.37" height="13.406">200.000</text>
+      <text x="785.5" y="435.01" width="17.342" height="13.406">3%</text>
+      <text x="973.75" y="435.01" width="17.342" height="13.406">0%</text>
+    </font>
+    <font size="12" face="KMGWTR+Helvetica" src="recibo_font3.ttf">
+      <text x="30" y="467.49" width="319.68" height="13.406">--------------------------------------------------------------------------------</text>
+      <text x="32.5" y="499.97" width="52.668" height="13.406">MONEDA</text>
+      <text x="88.504" y="499.97" width="33.996" height="13.406">(COP)</text>
+      <text x="125.836" y="499.97" width="41.352" height="13.406">PESOS</text>
+      <text x="170.524" y="499.97" width="89.352" height="13.406">COLOMBIANOS</text>
+    </font>
+    <font size="12" face="EKFIOI+Helvetica" src="recibo_font2.ttf">
+      <text x="32.5" y="522.95" width="44.03" height="13.406">Subtotal</text>
+      <text x="597.25" y="522.95" width="13.346" height="13.406">12</text>
+      <text x="32.5" y="545.44" width="28.008" height="13.406">Valor</text>
+      <text x="63.844" y="545.44" width="23.354" height="13.406">neto</text>
+      <text x="597.25" y="545.44" width="13.346" height="13.406">23</text>
+      <text x="32.5" y="567.92" width="57.362" height="13.406">Descuento</text>
+      <text x="93.196" y="567.92" width="22.682" height="13.406">total</text>
+      <text x="597.25" y="567.92" width="13.346" height="13.406">43</text>
+      <text x="32.5" y="590.4" width="19.344" height="13.406">IVA</text>
+      <text x="597.25" y="590.4" width="13.346" height="13.406">87</text>
+      <text x="32.5" y="613.38" width="38.678" height="13.406">TOTAL</text>
+      <text x="597.25" y="613.38" width="20.018" height="13.406">198</text>
+    </font>
+    <font size="16" face="Arial" color="#FF0064" src="recibo_font4.ttf">
+      <text x="20" y="30" width="74.719" height="17.875">Evaluation</text>
+      <text x="99.164" y="30" width="37.344" height="17.875">Only.</text>
+      <text x="140.953" y="30" width="56.922" height="17.875">Created</text>
+      <text x="202.32" y="30" width="28.453" height="17.875">with</text>
+      <text x="235.219" y="30" width="94.258" height="17.875">Aspose.PDF.</text>
+      <text x="333.922" y="30" width="68.477" height="17.875">Copyright</text>
+      <text x="406.844" y="30" width="76.516" height="17.875">2002-2019</text>
+      <text x="487.805" y="30" width="53.367" height="17.875">Aspose</text>
+      <text x="545.617" y="30" width="23.117" height="17.875">Pty</text>
+      <text x="573.18" y="30" width="26.688" height="17.875">Ltd.</text>
+    </font>
+  </page>
+</pdf2xml>

@@ -8,7 +8,6 @@ import com.soltec.entities.DetalleFactura;
 import com.soltec.entities.Factura;
 import com.soltec.entities.Usuario;
 
-
 public class EnviarCorreo {
 	private Correo correo;
 	private EnviarMail enviar;
@@ -31,14 +30,33 @@ public class EnviarCorreo {
 
 		boolean creado = false;
 		boolean enviado = false;
+
+		String saludo = "Estimado(a) " + us.getNombre() + " " + us.getApellido()
+				+ ", ha recibido un DOCUMENTO ELECTRÓNICO por parte de SolTec 2.0.\r\n"
+				+ "Envío que se efectúa mediante los sistemas de Facturación Electrónica del Proveedor Tecnológico SolTec, "
+				+ "autorizado bajo la resolución DIAN 000413 del 18 Enero del 2019.";
+		
+		String datosArchivos= "Adjunto en el correo se encuentra un Archivo .ZIP con los siguientes documentos:\r\n"
+				+ "• Representación gráfica del comprobante con extensión .PDF\r\n"
+				+ "• Contenedor Electrónico con extensión .XML\r\n";
+		
+		String solicitudes = "Solicitamos que por favor revise el documento electrónico y sus anexos e .\r\n\r\n"
+				+ "Este E-mail ha sido enviado automáticamente por favor no responder a esta cuenta, "
+				+ "de requerir cualquier aclaratoria o información adicional debe comunicarse directamente las direcciones de email o teléfono"
+				+ " de: SOLTEC 2.0.\r\n"
+				+ "\r\n"
+				+ "La información contenida en este E-mail es confidencial y solo puede ser utilizada por la persona o "
+				+ "la empresa a la cual está dirigido y/o por el emisor. Si por error recibe este mensaje, "
+				+ "favor reenviarlo y borrar el mensaje recibido inmediatamente.";
+
 		try {
-			correo = new Correo("facturacionpyme123@gmail.com", nombreArchivo, "pyme12345", "", us.getCorreo(),
-					"\u001B[36m¡Hola! \nNos alegramos que hayas generado una factura en nuestro sitio web, en el siguiente archivo encontrarás los detalles de tu factura electrónica",
-					"Factura electrónica");
+			correo = new Correo("facturacionpyme123@gmail.com", nombreArchivo, nombreArchivo, "pyme12345", "", "",
+					us.getCorreo(), "¡Hola! \n\n" + saludo +"\n\n" + datosArchivos + "\n\n" + solicitudes, factura.getCUFE()+";Factura electrónica;SOLTEC 2.0");
 
 			creado = generarPDF.generarPDF(nombreArchivo, img, us, factura, df);
 
 			correo.setRutaArchivo(new File(nombreArchivo).toString());
+			correo.setRutaArchivo1(new File("recibo.xml").toString());
 
 			enviado = enviar.SendMail(correo);
 
@@ -80,4 +98,3 @@ public class EnviarCorreo {
 	}
 
 }
-

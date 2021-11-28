@@ -18,8 +18,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.soltec.entities.Cliente;
+import com.soltec.entities.DetalleFactura;
 import com.soltec.entities.Factura;
+import com.soltec.entities.Producto;
+import com.soltec.service.ClienteService;
+import com.soltec.service.DetalleFacturaService;
 import com.soltec.service.FacturaService;
+import com.soltec.service.ProductoService;
 
 @RestController // Controlador de tipo Rest
 @CrossOrigin(origins="http://localhost:4200", methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT, RequestMethod.DELETE})
@@ -29,9 +35,35 @@ public class FacturaController {
 	@Autowired // estamos inyectando la Interface de FacturaService en el controlador
 	private FacturaService facturaService;
 	
+	@Autowired
+	private DetalleFacturaService detalleFacturaService;
+
+	@Autowired
+	private ProductoService productoService;
+	
+	@Autowired
+	private ClienteService clienteService;
+	
 	//Crear nueva factura
 	@PostMapping("/")
-	public ResponseEntity<?> crear(@RequestBody Factura factura) {
+	/*
+	 * public ResponseEntity<?> crear(@RequestBody Factura factura, @RequestBody
+	 * List<Producto> productos) { factura.setCUFE(generarCUFE(factura)); return
+	 * ResponseEntity.status(HttpStatus.CREATED).body(facturaService.save(factura));
+	 * }
+	 */
+	
+	public ResponseEntity<?> crear(@RequestBody Factura factura, @RequestBody List<Producto> productos) {
+		factura.setCUFE(generarCUFE(factura));
+		DetalleFactura df = new DetalleFactura();
+		
+		for(Producto p:productos) {
+			df.setFactura_CUFE(factura.getCUFE());
+			productoService.save(p);
+			df.setProducto_codigo(p.getCodigo());
+			detalleFacturaService.save(df);
+		}
+
 		return ResponseEntity.status(HttpStatus.CREATED).body(facturaService.save(factura));
 	}
 	
@@ -56,4 +88,20 @@ public class FacturaController {
 	    public ResponseEntity<?> editar(@RequestBody Factura facturaEditar){
 	        return ResponseEntity.status(HttpStatus.CREATED).body(facturaService.save(facturaEditar));
 	    }
+		
+	private String generarCUFE(Factura f) {
+		String cufe ="";	
+ 
+		Cliente cl = clienteService.findById(f.getCliente_numero_documento()).get();
+		
+		cufe+=(""+ f.getRango_numeracion() //NumFactura
+		+ f.convertirFecha(f.getFecha_expedicion()) //
+		+ f.getEmpresa_NIT() //NIT factura);
+		+ cl.getContribuyente()
+		+ f.getCliente_numero_documento()
+		+ cl.getNumero_documento()
+		+ f.getRango_numeracion());
+		
+		return org.apache.commons.codec.digest.DigestUtils.sha1Hex( cufe );
+	}
 }

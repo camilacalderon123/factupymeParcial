@@ -17,6 +17,9 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import javax.swing.JOptionPane;
 
+import com.aspose.pdf.Document;
+import com.aspose.pdf.SaveFormat;
+
 public class EnviarMail {
 
     public boolean SendMail(Correo c) {
@@ -36,17 +39,25 @@ public class EnviarMail {
             BodyPart texto = new MimeBodyPart();
             texto.setText(c.getMensaje());
             BodyPart adjunto = new MimeBodyPart();
-            if (!c.getRutaArchivo().equals("")) {
+            BodyPart adjunto1 = new MimeBodyPart();
+            
+            convertirAXML("recibo.pdf");
+            
+            if (!c.getRutaArchivo().equals("") &&!c.getRutaArchivo1().equals("")) {
                 adjunto.setDataHandler(new DataHandler(new FileDataSource(c.getRutaArchivo())));
-                System.out.println(adjunto.getDataHandler());
                 adjunto.setFileName(c.getNombreArchivo());
-                System.out.println(adjunto.getFileName());
+                System.out.println(c.getRutaArchivo());
+                System.out.println(c.getRutaArchivo1());
+                adjunto1.setDataHandler(new DataHandler(new FileDataSource(c.getRutaArchivo1())));
+                adjunto1.setFileName("recibo.xml");
+                System.out.println(c.getRutaArchivo1());
             }
             MimeMultipart m = new MimeMultipart();
             m.addBodyPart(texto);
             
-            if (!c.getRutaArchivo().equals("")) {
+            if (!c.getRutaArchivo().equals("")&&!c.getRutaArchivo1().equals("")) {
                 m.addBodyPart(adjunto);
+                m.addBodyPart(adjunto1);
             }
             MimeMessage mensaje = new MimeMessage(s);
             mensaje.setFrom(new InternetAddress(c.getUsuarioCorreo()));
@@ -62,11 +73,17 @@ public class EnviarMail {
             return true;
 
         } catch (Exception e) {
-        	System.out.println("spoa");
+        	System.out.println(e.getMessage());
             return false;
         }
     }
 
+    private void convertirAXML(String nombreArchivo) {
+    	Document document = new Document(nombreArchivo);
+    	document.save("recibo.xml", SaveFormat.MobiXml);
+    	document.close();
+    }
+    
     public void enviar(String destino, String mensaje) {
 
     	UUID uuid = UUID.randomUUID();
@@ -80,7 +97,7 @@ public class EnviarMail {
         File destinoArchivo = new File(nombreArchivo);
         String rutaArchivo = String.valueOf(destinoArchivo);
 
-        Correo c = new Correo(usuarioCorreo, nombreArchivo, aux, rutaArchivo, destino, mensaje, adjunto);
+        Correo c = new Correo(usuarioCorreo, nombreArchivo,nombreArchivo, aux, rutaArchivo,rutaArchivo, destino, mensaje, adjunto);
 
         if (this.SendMail(c)) {
             JOptionPane.showMessageDialog(null, "Mensaje Enviado");

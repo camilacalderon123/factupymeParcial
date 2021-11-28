@@ -1,5 +1,6 @@
 package com.soltec.entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -103,6 +104,11 @@ public class Factura {
 		this.cliente_numero_documento = cliente_numero_documento;
 	}
 	
+	
+	public String convertirFecha(Date fecha) {
+		SimpleDateFormat formatter = new SimpleDateFormat("YYYYmmddHHMMss");
+		return formatter.format(fecha);
+	}
 	
 	/*private List<DetalleFactura> detalleFacturas;
 	

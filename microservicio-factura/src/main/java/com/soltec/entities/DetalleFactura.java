@@ -17,6 +17,10 @@ public class DetalleFactura {
 	private int producto_codigo;
 	private int cantidad;
 
+	public DetalleFactura() {
+		super();
+	}
+	
 	public DetalleFactura(int id_detalle, String factura_CUFE, int producto_codigo, int cantidad) {
 		super();
 		this.id_detalle = id_detalle;
