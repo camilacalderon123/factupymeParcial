@@ -13,8 +13,8 @@ public class GenerarQRCode {
 	public GenerarQRCode() throws Exception {
 		QRCode qrCode = new QRCode();
 		qrCode.setData("https://divisist2.ufps.edu.co/");
-		qrCode.setHeight(250);
-		qrCode.setSize(250);
+		qrCode.setHeight(200);
+		qrCode.setSize(200);
 		qrCode.setFormato("png");
 		File f =new File("QR.png");
 		qrCode.setPath(f.getAbsolutePath());

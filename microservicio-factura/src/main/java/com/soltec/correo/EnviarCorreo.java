@@ -7,6 +7,7 @@ import java.io.IOException;
 import com.soltec.entities.Cliente;
 import com.soltec.entities.DetalleFactura;
 import com.soltec.entities.Factura;
+import com.soltec.entities.RangoNumeracion;
 import com.soltec.entities.Usuario;
 
 public class EnviarCorreo {
@@ -27,7 +28,7 @@ public class EnviarCorreo {
 		this.generarPDF = generarPDF;
 	}
 
-	public boolean enviarCorreo(String nombreArchivo, File img, Cliente cl, Factura factura, DetalleFactura df) {
+	public boolean enviarCorreo(String nombreArchivo, File img, Cliente cl, Factura factura, DetalleFactura df, RangoNumeracion rg) {
 
 		boolean creado = false;
 		boolean enviado = false;
@@ -53,7 +54,7 @@ public class EnviarCorreo {
 			correo = new Correo("facturacionpyme123@gmail.com", nombreArchivo, nombreArchivo, "pyme12345", "", "",
 					cl.getCorreo(), "¡Hola! \n\n" + saludo +"\n\n" + datosArchivos + "\n\n" + solicitudes, factura.getCUFE()+";Factura electrónica;SOLTEC 2.0");
 
-			creado = generarPDF.generarPDF(nombreArchivo, img, cl, factura, df);
+			creado = generarPDF.generarPDF(nombreArchivo, img, cl, factura, df, rg);
 
 			correo.setRutaArchivo(new File(nombreArchivo).toString());
 			correo.setRutaArchivo1(new File("recibo.xml").toString());
