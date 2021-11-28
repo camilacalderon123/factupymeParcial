@@ -22,6 +22,7 @@ import { EditarProductoComponent } from './producto/editar-producto.component';
 import { RangoNumeracionComponent } from './rango-numeracion/rango-numeracion.component';
 import { AgregarRangoComponent } from './rango-numeracion/agregar-rango.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { EmpresaComponent } from './empresa/empresa.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { InicioComponent } from './inicio/inicio.component';
     EditarProductoComponent,
     RangoNumeracionComponent,
     AgregarRangoComponent,
-    InicioComponent
+    InicioComponent,
+    EmpresaComponent
   ],
   imports: [
     BrowserModule,
