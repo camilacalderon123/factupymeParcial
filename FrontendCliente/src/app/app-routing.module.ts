@@ -13,6 +13,8 @@ import { EditarProductoComponent } from './producto/editar-producto.component';
 import { RangoNumeracionComponent } from './rango-numeracion/rango-numeracion.component';
 import { AgregarRangoComponent } from './rango-numeracion/agregar-rango.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { EmpresaComponent } from './empresa/empresa.component';
+import { ListarFacturasComponent } from './factura/listar-facturas.component';
 
 
 
@@ -32,7 +34,9 @@ const routes:Routes=[
     {path: 'rangos/form', component: AgregarRangoComponent},
 
     {path: 'inicio', component: InicioComponent},
+    {path: 'inicio/empresa', component: EmpresaComponent},
 
+    {path: 'ver-facuras', component: ListarFacturasComponent},
     {path: 'emitirFactura', component:ModalComponent},
     {path: 'emitirFactura/datos/:id', component:FacturaComponent },
     {path: 'emitirFactura/total', component:VerTotalComponent},

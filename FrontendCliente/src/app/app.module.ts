@@ -23,6 +23,7 @@ import { RangoNumeracionComponent } from './rango-numeracion/rango-numeracion.co
 import { AgregarRangoComponent } from './rango-numeracion/agregar-rango.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { EmpresaComponent } from './empresa/empresa.component';
+import { ListarFacturasComponent } from './factura/listar-facturas.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { EmpresaComponent } from './empresa/empresa.component';
     RangoNumeracionComponent,
     AgregarRangoComponent,
     InicioComponent,
-    EmpresaComponent
+    EmpresaComponent,
+    ListarFacturasComponent
   ],
   imports: [
     BrowserModule,

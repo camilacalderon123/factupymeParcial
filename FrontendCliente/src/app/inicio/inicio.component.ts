@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cliente } from '../models/Cliente';
 
 @Component({
   selector: 'app-inicio',

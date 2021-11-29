@@ -1,0 +1,49 @@
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="title_client">Facturas</h1>
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Fecha de expedición</th>
+                                            <th>Fecha de vencimiento</th>
+                                            <th>Cliente</th>
+                                            <th>Total</th>
+                                            <th>Enviar</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Fecha de expedición</th>
+                                            <th>Fecha de vencimiento</th>
+                                            <th>Cliente</th>
+                                            <th>Total</th>
+                                            <th>Enviar</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr *ngFor="let fac of factura">
+                                            <td>{{fac.fecha_expedicion}}</td>
+                                            <td>{{fac.fecha_vencimiento}}</td>
+                                            <td>{{fac.cliente_numero_documento}}</td>
+                                            <td>1</td>
+                                            <td>
+                                                <button class="btn boton-accion" href="editar-cliente.html">
+                                                    <i class="fas fa-paper-plane"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->

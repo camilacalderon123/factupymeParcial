@@ -9,7 +9,7 @@
                         <span class="details">
                             ID producto
                         </span>
-                        <input name="codigo"  type="text" [(ngModel)]="producto.codigo" required>
+                        <input name="codigo" type="text" [(ngModel)]="producto.codigo" required>
                     </div>
                     <br>
                     <div class="input-box">
@@ -59,19 +59,17 @@
                         <span class="details">
                             Estado
                         </span>
-                        <input name="estado" type="number" [(ngModel)]="producto.estado"
-                            required>
+                        <input name="estado" type="number" [(ngModel)]="producto.estado" required>
                     </div>
                 </div>
-                    <div class="button">
-                        <button class="button_style" (click)='create()'>Guardar</button>
-                        <!--con el create() se redirige a la funcion que esta en nuestro component-->
-                    </div>
-                    <div class="button2">
-                        <button class="button_style" [routerLink]="['/ver-productos']">Cancelar</button>
-                    </div>
+                <div class="button">
+                    <button class="button_style" (click)='create()'>Guardar</button>
+                    <!--con el create() se redirige a la funcion que esta en nuestro component-->
+                </div>
+                <div class="button2">
+                    <button class="button_style" [routerLink]="['/ver-productos']">Cancelar</button>
+                </div>
 
-                    
+
             </form>
         </div>
-    
