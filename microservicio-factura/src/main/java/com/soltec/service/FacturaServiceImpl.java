@@ -35,5 +35,9 @@ public class FacturaServiceImpl implements FacturaService{
 		return facturaRepository.save(factura);
 	}
 
+	@Transactional(readOnly=true)
+	public Optional<Factura> findById(String CUFE) {
+		return facturaRepository.findById(CUFE);
+	}
 
 }

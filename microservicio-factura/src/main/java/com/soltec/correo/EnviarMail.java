@@ -52,11 +52,9 @@ public class EnviarMail {
 			if (!c.getRutaArchivo().equals("") && !c.getRutaArchivo1().equals("")) {
 				adjunto.setDataHandler(new DataHandler(new FileDataSource(c.getRutaArchivo())));
 				adjunto.setFileName(c.getNombreArchivo());
-				System.out.println(c.getRutaArchivo());
-				System.out.println(c.getRutaArchivo1());
+
 				adjunto1.setDataHandler(new DataHandler(new FileDataSource(c.getRutaArchivo1())));
 				adjunto1.setFileName("recibo.xml");
-				System.out.println(c.getRutaArchivo1());
 			}
 			MimeMultipart m = new MimeMultipart();
 			m.addBodyPart(texto);

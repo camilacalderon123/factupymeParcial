@@ -16,4 +16,6 @@ public interface FacturaService{
 		
 	public Factura save(Factura factura);
 	
+	public Optional<Factura> findById(String CUFE);
+	
 }

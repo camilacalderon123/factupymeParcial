@@ -37,7 +37,7 @@ public class EnviarCorreo {
 				+ "Envío que se efectúa mediante los sistemas de Facturación Electrónica del Proveedor Tecnológico SolTec, "
 				+ "autorizado bajo la resolución DIAN 000413 del 18 Enero del 2019.";
 		
-		String datosArchivos= "Adjunto en el correo se encuentra un Archivo .ZIP con los siguientes documentos:\r\n"
+		String datosArchivos= "Adjunto en el correo se encuentran los siguientes documentos:\r\n"
 				+ "• Representación gráfica del comprobante con extensión .PDF\r\n"
 				+ "• Contenedor Electrónico con extensión .XML\r\n";
 		
