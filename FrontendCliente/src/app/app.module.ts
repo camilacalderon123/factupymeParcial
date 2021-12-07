@@ -24,6 +24,8 @@ import { AgregarRangoComponent } from './rango-numeracion/agregar-rango.componen
 import { InicioComponent } from './inicio/inicio.component';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { ListarFacturasComponent } from './factura/listar-facturas.component';
+import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
+import { CrearUsuarioComponent } from './crear-usuario/crear-usuario.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { ListarFacturasComponent } from './factura/listar-facturas.component';
     AgregarRangoComponent,
     InicioComponent,
     EmpresaComponent,
-    ListarFacturasComponent
+    ListarFacturasComponent,
+    IniciarSesionComponent,
+    CrearUsuarioComponent
   ],
   imports: [
     BrowserModule,

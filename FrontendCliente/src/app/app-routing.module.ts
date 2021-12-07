@@ -15,6 +15,8 @@ import { AgregarRangoComponent } from './rango-numeracion/agregar-rango.componen
 import { InicioComponent } from './inicio/inicio.component';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { ListarFacturasComponent } from './factura/listar-facturas.component';
+import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
+import { CrearUsuarioComponent } from './crear-usuario/crear-usuario.component';
 
 
 
@@ -35,6 +37,9 @@ const routes:Routes=[
 
     {path: 'inicio', component: InicioComponent},
     {path: 'inicio/empresa', component: EmpresaComponent},
+
+    {path: 'login', component: IniciarSesionComponent}, //LOGIN
+    {path: 'create', component: CrearUsuarioComponent }, //CREATE
 
     {path: 'ver-facuras', component: ListarFacturasComponent},
     {path: 'emitirFactura', component:ModalComponent},
