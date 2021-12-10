@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class EmpresaService {
 
   //url a la que nos vamos a conectar  a nuestra api rest
-  private url:string="http://localhost:8090/api/facturacion/Empresa/";
+  private url:string="http://localhost:8090/api/facturacion-a/empresa/";
 
   constructor(private http:HttpClient) { }
 

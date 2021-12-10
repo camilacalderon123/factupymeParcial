@@ -12,61 +12,68 @@
         					<div class="user-details">
         						<div class="input-box">
         							<span class="details">Nit empresa</span>
-        							<input type="number" placeholder="NIT" required>
+        							<input type="number" placeholder="NIT" name="nit" [(ngModel)]="empresa.nit"required>
         						</div>
 
         						<div class="input-box">
         							<span class="details">Número documento</span>
-        							<input type="text" placeholder="Ingrese identificación" required>
+        							<input type="text" placeholder="Ingrese identificación" name="numero_documento" [(ngModel)]="empresa.numero_documento" required>
+        						</div>
+								<div class="input-box">
+									<span class="details">Número Confirmación</span>
+        							<input type="text" placeholder="Ingrese número de confirmación" name="documento" [(ngModel)]="empresa.documento" required>
         						</div>
 
         						<div class="input-box">
         							<span class="details">Razón social empresa</span>
-        							<input type="number" placeholder="Razón social" required>
+        							<input type="text" placeholder="Razón social" name="razon_social" [(ngModel)]="empresa.razon_social" required>
         						</div>
 
         						<div class="input-box">
         							<span class="details">Departamento</span>
-        							<input type="text" placeholder="Departamento" required>
+        							<input type="text" placeholder="Departamento" name="departamento" [(ngModel)]="empresa.departamento" required>
         						</div>
         						<div class="input-box">
         							<span class="details">Dirección de la empresa</span>
-        							<input type="text" placeholder="Dirección" required>
+        							<input type="text" placeholder="Dirección" name="direccion" [(ngModel)]="empresa.direccion" required>
         						</div>
 
         						<div class="input-box">
         							<span class="details">Municipio/Ciudad</span>
-        							<input type="text" placeholder="Municipio/Ciudad" required>
+        							<input type="text" placeholder="Municipio/Ciudad" name="municipio" [(ngModel)]="empresa.municipio" required>
         						</div>
 
         						<div class="input-box">
         							<span class="details">Télefono de la empresa</span>
-        							<input type="text" placeholder="Ingrese identificación" required>
-        						</div>
-        						<div class="input-box">
-        							<span class="details">Contraseña</span>
-        							<input type="text" placeholder="Ingrese la contraseña" required>
-        						</div>
-        						<div class="input-box">
-        							<span class="details">Nombre representante legal</span>
-        							<input type="text" placeholder="Ingrese el teléfono" required>
-        						</div>
-        						<div class="input-box">
-        							<span class="details">Correo</span>
-        							<input type="text" placeholder="Ingrese el correo" required>
+        							<input type="text" placeholder="Ingrese identificación" name="telefono" [(ngModel)]="empresa.telefono" required>
         						</div>
         						<div class="input-box">
         							<span class="details">Tipo documento</span>
-        							<input type="number" placeholder="Representante legal empresa" required>
+        							<input type="number" placeholder="Representante legal empresa" name="tipo_documento" [(ngModel)]="empresa.tipo_documento" required>
         						</div>
-        					 </div>
-
-        						<div class="buttom">
-        							<input type="submit" value="Registrar">
+        						<div class="input-box">
+        							<span class="details">Nombre representante legal</span>
+        							<input type="text" placeholder="Ingrese el teléfono" name="nombre_representante" [(ngModel)]="empresa.nombre_representante" required>
+        						</div>
+        						<div class="input-box">
+        							<span class="details">Correo</span>
+        							<input type="text" placeholder="Ingrese el correo" name="correo_empresa" [(ngModel)]="empresa.correo_empresa" required>
+        						</div>
+								<div class="input-box">
+        							<span class="details">logo</span>
+        							<input type="text" placeholder="Ingrese el logo" name="logo_empresa" [(ngModel)]="empresa.logo_empresa" required>
         						</div>
         						
-                                <div class="buttom2">
-                                    <a href="inicioapp.html">Cancelar</a> 
-                                </div>
+        					 </div>
+
+							 <div class="button">
+								<button class="button_style" (click)='create()'>Guardar</button>
+								<!--con el create() se redirige a la funcion que esta en nuestro component-->
+							  </div>
+	  
+							  <div class="button2">
+								<button class="button_style" [routerLink]="['/inicio']">Cancelar</button>
+							  </div>
+        						
         					</form>
         				  </div>

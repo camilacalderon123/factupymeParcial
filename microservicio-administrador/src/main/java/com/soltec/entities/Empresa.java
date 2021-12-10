@@ -12,8 +12,8 @@ import javax.persistence.*;
 @Table(name = "empresa")
 public class Empresa{
 
-	@Column(name="correo_empresa")
-	private String correoEmpresa;
+	
+	private String correo_empresa;
 
 	private String departamento;
 
@@ -26,36 +26,35 @@ public class Empresa{
 	@Id
 	private int nit;
 
-	@Column(name="nombre_representante")
-	private String nombreRepresentante;
+	
+	private String nombre_representante;
 
-	@Column(name="numero_documento")
-	private String numeroDocumento;
 
-	@Column(name="razon_social")
-	private String razonSocial;
+	private String numero_documento;
+
+	
+	private String razon_social;
 
 	private String telefono;
 
-	@Column(name="tipo_documento")
-	private int tipoDocumento;
+	
+	private int tipo_documento;
+	
+	private String logo_empresa;
 
 	public Empresa() {
 	}
 
-	
-	
-	
-	public String getCorreoEmpresa() {
-		return this.correoEmpresa;
+	public String getCorreo_empresa() {
+		return correo_empresa;
 	}
 
-	public void setCorreoEmpresa(String correoEmpresa) {
-		this.correoEmpresa = correoEmpresa;
+	public void setCorreo_empresa(String correo_empresa) {
+		this.correo_empresa = correo_empresa;
 	}
 
 	public String getDepartamento() {
-		return this.departamento;
+		return departamento;
 	}
 
 	public void setDepartamento(String departamento) {
@@ -63,7 +62,7 @@ public class Empresa{
 	}
 
 	public String getDireccion() {
-		return this.direccion;
+		return direccion;
 	}
 
 	public void setDireccion(String direccion) {
@@ -71,7 +70,7 @@ public class Empresa{
 	}
 
 	public String getDocumento() {
-		return this.documento;
+		return documento;
 	}
 
 	public void setDocumento(String documento) {
@@ -79,7 +78,7 @@ public class Empresa{
 	}
 
 	public String getMunicipio() {
-		return this.municipio;
+		return municipio;
 	}
 
 	public void setMunicipio(String municipio) {
@@ -87,51 +86,67 @@ public class Empresa{
 	}
 
 	public int getNit() {
-		return this.nit;
+		return nit;
 	}
 
 	public void setNit(int nit) {
 		this.nit = nit;
 	}
 
-	public String getNombreRepresentante() {
-		return this.nombreRepresentante;
+	public String getNombre_representante() {
+		return nombre_representante;
 	}
 
-	public void setNombreRepresentante(String nombreRepresentante) {
-		this.nombreRepresentante = nombreRepresentante;
+	public void setNombre_representante(String nombre_representante) {
+		this.nombre_representante = nombre_representante;
 	}
 
-	public String getNumeroDocumento() {
-		return this.numeroDocumento;
+	public String getNumero_documento() {
+		return numero_documento;
 	}
 
-	public void setNumeroDocumento(String numeroDocumento) {
-		this.numeroDocumento = numeroDocumento;
+	public void setNumero_documento(String numero_documento) {
+		this.numero_documento = numero_documento;
 	}
 
-	public String getRazonSocial() {
-		return this.razonSocial;
+	public String getRazon_social() {
+		return razon_social;
 	}
 
-	public void setRazonSocial(String razonSocial) {
-		this.razonSocial = razonSocial;
+	public void setRazon_social(String razon_social) {
+		this.razon_social = razon_social;
 	}
 
 	public String getTelefono() {
-		return this.telefono;
+		return telefono;
 	}
 
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 
-	public int getTipoDocumento() {
-		return this.tipoDocumento;
+	public int getTipo_documento() {
+		return tipo_documento;
 	}
 
-	public void setTipoDocumento(int tipoDocumento) {
-		this.tipoDocumento = tipoDocumento;
+	public void setTipo_documento(int tipo_documento) {
+		this.tipo_documento = tipo_documento;
 	}
+
+	public String getLogo_empresa() {
+		return logo_empresa;
+	}
+
+	public void setLogo_empresa(String logo_empresa) {
+		this.logo_empresa = logo_empresa;
+	}
+
+	
+	
+	
+	
+
+
+	
 
 }

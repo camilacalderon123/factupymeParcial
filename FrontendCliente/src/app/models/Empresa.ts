@@ -1,13 +1,14 @@
 export class Empresa {
-    correoEmpresa:string;
+    correo_empresa:string;
     departamento:string;
     direccion:string;
-    documento :string;
     municipio:string;
     nit:number;
-    nombreRepresentante:string;
-    numeroDocumento :string;
-    razonSocial : string;
-    telefono: string;
-    tipoDocumento : number;
+    nombre_representante:string;
+    numero_documento :string;
+    documento :string;
+    razon_social :string;
+    telefono:string;
+    tipo_documento :number;
+    logo_empresa:string;
 }
