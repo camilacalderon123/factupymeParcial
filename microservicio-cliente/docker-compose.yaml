@@ -1,0 +1,12 @@
+version: '2'
+services:
+  apigateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports: 
+      - 8090:8090
+    volumes: 
+      - ./microservicio-cliente:/home
+      
