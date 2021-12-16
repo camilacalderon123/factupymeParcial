@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  eureka-server:
+    image: eureka #nombre de la imagen que hemos creado
+    restart: always
+    container_name: eureka
+    ports:
+      - '8761:8761'
+    networks:
+      - 'dockernetflix-network'
+  zuul-service:
+    image: zuul #nombre de la imagen que hemos creado
+    restart: always
+    container_name: zuul
+    ports:
+      - '8090:8090'
+    networks:
+      - 'dockernetflix-network'
+  greeting-microservice:
+    image: clientemicroservice #nombre de la imagen que hemos creado
+    restart: always
+    container_name: clientemicroservice
+    networks:
+      - 'dockernetflix-network'
+networks:
+  dockernetflix-network: #necesitamos crear en una red para alojar los servicios en ella y que puedan comunicarse entre sí
+ 

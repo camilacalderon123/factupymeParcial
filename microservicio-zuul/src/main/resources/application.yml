@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: microservicio-zuul
+ 
+#Tomcat Embedded Server Configuration
+server:
+  port: 8090
+ 
+#Zuul Configuration Properties
+zuul:
+  routes:
+      usuarios:
+        path: /api/facturacion/**
+        serviceId: microservicio-producto
+        
+      cliente:
+        path: /api/facturacion-c/**
+        serviceId: microservicio-cliente  
+           
+      factura:
+        path: /api/facturacion-f/**
+        serviceId: microservicio-factura  
+        
+      administrador:
+        path: /api/facturacion-a/**
+        serviceId: microservicio-administrador        
+        
+#Eureka Configuration Properties
+eureka: 
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
