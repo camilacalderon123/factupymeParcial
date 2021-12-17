@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pdf2xml pages="1">
+  <title />
+  <page width="842" height="1190">
+    <font size="26" face="CUAVMV+Helvetica-Bold" src="recibo_font1.ttf">
+      <text x="219.44" y="81.45" width="147.364" height="29.047">Facturación</text>
+      <text x="374.036" y="81.45" width="140.17" height="29.047">Electrónica</text>
+      <text x="521.43" y="81.45" width="8.658" height="29.047">-</text>
+      <text x="537.316" y="81.45" width="85.258" height="29.047">SolTec</text>
+      <img x="30" y="35" width="306" height="155" src="recibo_pic1.png" />
+    </font>
+    <font size="12" face="CUAVMV+Helvetica-Bold" src="recibo_font1.ttf">
+      <text x="315.57" y="229.52" width="43.346" height="13.406">Factura</text>
+      <text x="362.25" y="229.52" width="64.694" height="13.406">Electrónica</text>
+      <text x="430.278" y="229.52" width="14.006" height="13.406">de</text>
+      <text x="447.618" y="229.52" width="32.678" height="13.406">Venta</text>
+      <text x="483.63" y="229.52" width="13.463" height="13.406">N°</text>
+      <text x="500.43" y="229.52" width="26.006" height="13.406">FE-1</text>
+      <text x="344.29" y="255.51" width="38.676" height="13.406">Fecha:</text>
+      <text x="386.302" y="255.51" width="60.05" height="13.406">28/11/2021</text>
+      <text x="449.686" y="255.51" width="48.026" height="13.406">10:11:54</text>
+    </font>
+    <font size="10" face="WLKRFC+Helvetica" src="recibo_font2.ttf">
+      <text x="149.4" y="279.38" width="49.462" height="11.172">Resolución</text>
+      <text x="201.64" y="279.38" width="23.892" height="11.172">DIAN</text>
+      <text x="228.31" y="279.38" width="11.219" height="11.172">N°</text>
+      <text x="242.31" y="279.38" width="83.401" height="11.172">118764018183277</text>
+      <text x="328.49" y="279.38" width="16.122" height="11.172">con</text>
+      <text x="347.39" y="279.38" width="28.342" height="11.172">Prefijo</text>
+      <text x="378.51" y="279.38" width="12.78" height="11.172">FE</text>
+      <text x="394.07" y="279.38" width="27.242" height="11.172">desde</text>
+      <text x="424.09" y="279.38" width="27.802" height="11.172">20001</text>
+      <text x="454.67" y="279.38" width="24.462" height="11.172">hasta</text>
+      <text x="481.91" y="279.38" width="27.802" height="11.172">50000</text>
+      <text x="512.49" y="279.38" width="16.122" height="11.172">con</text>
+      <text x="531.39" y="279.38" width="36.682" height="11.172">vigencia</text>
+      <text x="570.85" y="279.38" width="27.242" height="11.172">desde</text>
+      <text x="600.87" y="279.38" width="50.042" height="11.172">28/11/2021</text>
+      <text x="653.69" y="279.38" width="38.922" height="11.172">10:11:51</text>
+    </font>
+    <font size="12" face="CUAVMV+Helvetica-Bold" src="recibo_font1.ttf">
+      <text x="507.87" y="304.47" width="36.66" height="13.406">CUFE:</text>
+      <text x="547.866" y="304.47" width="264.134" height="13.406">1dd4b9edc3caf71c0fdcb837676bccb74368c5f3</text>
+    </font>
+    <font size="12" face="CHTVIJ+Helvetica" src="recibo_font3.ttf">
+      <text x="32.5" y="328.95" width="41.34" height="13.406">DATOS</text>
+      <text x="77.176" y="328.95" width="50.676" height="13.406">CLIENTE</text>
+    </font>
+    <font size="12" face="CUAVMV+Helvetica-Bold" src="recibo_font1.ttf">
+      <text x="32.5" y="351.94" width="35.998" height="13.406">Razón</text>
+      <text x="71.836" y="351.94" width="86.688" height="13.406">social/Nombre:</text>
+      <text x="227.88" y="351.94" width="42.674" height="13.406">SolTEC</text>
+      <text x="423.25" y="351.94" width="23.328" height="13.406">NIT:</text>
+      <text x="618.63" y="351.94" width="66.722" height="13.406">1193530328</text>
+      <text x="32.5" y="374.42" width="58.68" height="13.406">Dirección:</text>
+      <text x="227.88" y="374.42" width="15.338" height="13.406">Av</text>
+      <text x="246.552" y="374.42" width="6.674" height="13.406">0</text>
+      <text x="256.56" y="374.42" width="6.674" height="13.406">#</text>
+      <text x="266.568" y="374.42" width="24.014" height="13.406">0-78</text>
+      <text x="423.25" y="374.42" width="54" height="13.406">Teléfono:</text>
+      <text x="618.63" y="374.42" width="66.722" height="13.406">3219810616</text>
+      <text x="32.5" y="396.9" width="28.68" height="13.406">País:</text>
+      <text x="227.88" y="396.9" width="54.674" height="13.406">Colombia</text>
+      <text x="423.25" y="396.9" width="36.012" height="13.406">Email:</text>
+      <text x="618.63" y="396.9" width="175.766" height="13.406">juansebasprada07@gmail.com</text>
+      <text x="32.5" y="419.38" width="44.664" height="13.406">Ciudad:</text>
+      <text x="227.88" y="419.38" width="44.002" height="13.406">Cucúta,</text>
+      <text x="275.22" y="419.38" width="11.998" height="13.406">N.</text>
+      <text x="290.556" y="419.38" width="14.006" height="13.406">de</text>
+      <text x="307.896" y="419.38" width="58.682" height="13.406">Santander</text>
+      <text x="423.25" y="419.38" width="25.33" height="13.406">Tipo</text>
+      <text x="451.918" y="419.38" width="51.348" height="13.406">Persona:</text>
+      <text x="618.63" y="419.38" width="46.678" height="13.406">Juridico</text>
+      <img x="630" y="10" width="200" height="200" src="recibo_pic2.png" />
+    </font>
+    <font size="12" face="CHTVIJ+Helvetica" src="recibo_font3.ttf">
+      <text x="32.5" y="462.36" width="38.018" height="13.406">Codigo</text>
+      <text x="73.852" y="462.36" width="16.01" height="13.406">del</text>
+      <text x="93.196" y="462.36" width="46.694" height="13.406">producto</text>
+      <text x="162.75" y="462.36" width="42.674" height="13.406">Nombre</text>
+      <text x="293" y="462.36" width="21.996" height="13.406">U/M</text>
+      <text x="423.25" y="462.36" width="28.008" height="13.406">Valor</text>
+      <text x="454.594" y="462.36" width="39.35" height="13.406">unitario</text>
+      <text x="553.5" y="462.36" width="10.67" height="13.406">%</text>
+      <text x="567.504" y="462.36" width="27.336" height="13.406">Desc</text>
+      <text x="683.75" y="462.36" width="19.344" height="13.406">IVA</text>
+    </font>
+    <font size="12" face="WLKRFC+Helvetica" src="recibo_font2.ttf">
+      <text x="32.5" y="485.35" width="29.354" height="13.406">AB12</text>
+      <text x="162.75" y="485.35" width="37.358" height="13.406">Zapato</text>
+      <text x="293" y="485.35" width="15.996" height="13.406">cm</text>
+      <text x="423.25" y="485.35" width="43.37" height="13.406">200.000</text>
+      <text x="553.5" y="485.35" width="17.342" height="13.406">3%</text>
+      <text x="683.75" y="485.35" width="17.342" height="13.406">0%</text>
+    </font>
+    <font size="12" face="CHTVIJ+Helvetica" src="recibo_font3.ttf">
+      <text x="32.5" y="528.33" width="52.668" height="13.406">MONEDA</text>
+      <text x="88.504" y="528.33" width="33.996" height="13.406">(COP)</text>
+      <text x="125.836" y="528.33" width="41.352" height="13.406">PESOS</text>
+      <text x="170.524" y="528.33" width="89.352" height="13.406">COLOMBIANOS</text>
+    </font>
+    <font size="12" face="WLKRFC+Helvetica" src="recibo_font2.ttf">
+      <text x="32.5" y="551.31" width="44.03" height="13.406">Subtotal</text>
+      <text x="423.25" y="551.31" width="13.346" height="13.406">12</text>
+      <text x="32.5" y="573.79" width="28.008" height="13.406">Valor</text>
+      <text x="63.844" y="573.79" width="23.354" height="13.406">neto</text>
+      <text x="423.25" y="573.79" width="13.346" height="13.406">23</text>
+      <text x="32.5" y="596.27" width="57.362" height="13.406">Descuento</text>
+      <text x="93.196" y="596.27" width="22.682" height="13.406">total</text>
+      <text x="423.25" y="596.27" width="13.346" height="13.406">43</text>
+      <text x="32.5" y="618.76" width="19.344" height="13.406">IVA</text>
+      <text x="423.25" y="618.76" width="13.346" height="13.406">87</text>
+      <text x="32.5" y="641.74" width="38.678" height="13.406">TOTAL</text>
+      <text x="423.25" y="641.74" width="20.018" height="13.406">198</text>
+    </font>
+    <font size="10" face="WLKRFC+Helvetica" src="recibo_font2.ttf">
+      <text x="50.59" y="664.11" width="6.67" height="11.172">A</text>
+      <text x="60.04" y="664.11" width="36.672" height="11.172">PARTIR</text>
+      <text x="99.49" y="664.11" width="19.452" height="11.172">DEL</text>
+      <text x="121.72" y="664.11" width="5.562" height="11.172">1</text>
+      <text x="130.06" y="664.11" width="13.89" height="11.172">DE</text>
+      <text x="146.73" y="664.11" width="35.558" height="11.172">ENERO</text>
+      <text x="185.07" y="664.11" width="19.452" height="11.172">DEL</text>
+      <text x="207.3" y="664.11" width="22.242" height="11.172">2020</text>
+      <text x="232.32" y="664.11" width="37.23" height="11.172">SOMOS</text>
+      <text x="272.33" y="664.11" width="77.24" height="11.172">BENEFICIARIOS</text>
+      <text x="352.35" y="664.11" width="13.89" height="11.172">DE</text>
+      <text x="369.02" y="664.11" width="12.23" height="11.172">LA</text>
+      <text x="384.03" y="664.11" width="18.9" height="11.172">LEY</text>
+      <text x="405.71" y="664.11" width="22.242" height="11.172">1955</text>
+      <text x="430.73" y="664.11" width="19.452" height="11.172">DEL</text>
+      <text x="452.96" y="664.11" width="11.122" height="11.172">25</text>
+      <text x="466.86" y="664.11" width="13.89" height="11.172">DE</text>
+      <text x="483.53" y="664.11" width="29.448" height="11.172">MAYO</text>
+      <text x="515.76" y="664.11" width="19.452" height="11.172">DEL</text>
+      <text x="537.99" y="664.11" width="22.242" height="11.172">2019</text>
+      <text x="563.01" y="664.11" width="6.67" height="11.172">Y</text>
+      <text x="572.46" y="664.11" width="20.56" height="11.172">SUS</text>
+      <text x="595.8" y="664.11" width="19.998" height="11.172">D.R.</text>
+      <text x="618.58" y="664.11" width="32.78" height="11.172">(ZESE)</text>
+      <text x="654.14" y="664.11" width="21.672" height="11.172">POR</text>
+      <text x="678.59" y="664.11" width="13.338" height="11.172">LO</text>
+      <text x="694.71" y="664.11" width="26.671" height="11.172">CUAL</text>
+      <text x="724.16" y="664.11" width="67.24" height="11.172">ABSTENERSE</text>
+      <text x="311.26" y="679.09" width="57.782" height="11.172">PRACTICAR</text>
+      <text x="371.82" y="679.09" width="66.67" height="11.172">RETEFUENTE</text>
+      <text x="441.27" y="679.09" width="13.89" height="11.172">DE</text>
+      <text x="457.94" y="679.09" width="18.888" height="11.172">F.C:</text>
+      <text x="479.61" y="679.09" width="51.142" height="11.172">05-12-2015</text>
+    </font>
+    <font size="12" face="CUAVMV+Helvetica-Bold" src="recibo_font1.ttf">
+      <text x="300.9" y="950.19" width="240.194" height="13.406">____________________________________</text>
+      <text x="350.31" y="968.17" width="32.678" height="13.406">Firma</text>
+      <text x="386.322" y="968.17" width="46.678" height="13.406">recibido</text>
+      <text x="436.338" y="968.17" width="14.006" height="13.406">de</text>
+      <text x="453.678" y="968.17" width="38.018" height="13.406">cliente</text>
+    </font>
+    <font size="12" face="WLKRFC+Helvetica" src="recibo_font2.ttf">
+      <text x="36.49" y="994.15" width="14.678" height="13.406">Se</text>
+      <text x="54.502" y="994.15" width="26.018" height="13.406">hace</text>
+      <text x="83.854" y="994.15" width="39.348" height="13.406">constar</text>
+      <text x="126.538" y="994.15" width="20.018" height="13.406">que</text>
+      <text x="149.89" y="994.15" width="9.338" height="13.406">la</text>
+      <text x="162.562" y="994.15" width="26.666" height="13.406">firma</text>
+      <text x="192.562" y="994.15" width="13.346" height="13.406">de</text>
+      <text x="209.242" y="994.15" width="20.018" height="13.406">una</text>
+      <text x="232.594" y="994.15" width="43.358" height="13.406">persona</text>
+      <text x="279.286" y="994.15" width="38.018" height="13.406">distinta</text>
+      <text x="320.638" y="994.15" width="16.01" height="13.406">del</text>
+      <text x="339.982" y="994.15" width="57.348" height="13.406">comprador</text>
+      <text x="400.666" y="994.15" width="3.334" height="13.406">,</text>
+      <text x="407.338" y="994.15" width="37.334" height="13.406">implica</text>
+      <text x="448.006" y="994.15" width="20.018" height="13.406">que</text>
+      <text x="471.358" y="994.15" width="28.682" height="13.406">dicha</text>
+      <text x="503.374" y="994.15" width="43.358" height="13.406">persona</text>
+      <text x="550.066" y="994.15" width="22.682" height="13.406">esta</text>
+      <text x="576.082" y="994.15" width="56.03" height="13.406">autorizada</text>
+      <text x="635.446" y="994.15" width="76.034" height="13.406">expresamente</text>
+      <text x="714.814" y="994.15" width="17.34" height="13.406">por</text>
+      <text x="735.49" y="994.15" width="9.338" height="13.406">el</text>
+      <text x="748.162" y="994.15" width="57.348" height="13.406">comprador</text>
+      <text x="278.28" y="1012.14" width="24.014" height="13.406">para</text>
+      <text x="305.628" y="1012.14" width="30.66" height="13.406">firmar</text>
+      <text x="339.624" y="1012.14" width="3.334" height="13.406">,</text>
+      <text x="346.296" y="1012.14" width="46.02" height="13.406">confesar</text>
+      <text x="395.652" y="1012.14" width="9.338" height="13.406">la</text>
+      <text x="408.324" y="1012.14" width="33.362" height="13.406">deuda</text>
+      <text x="445.02" y="1012.14" width="6" height="13.406">y</text>
+      <text x="454.356" y="1012.14" width="36.012" height="13.406">obligar</text>
+      <text x="493.704" y="1012.14" width="9.338" height="13.406">al</text>
+      <text x="506.376" y="1012.14" width="57.348" height="13.406">comprador</text>
+      <text x="131.21" y="1066.08" width="24.014" height="13.406">Esta</text>
+      <text x="158.558" y="1066.08" width="36.686" height="13.406">factura</text>
+      <text x="198.578" y="1066.08" width="12.674" height="13.406">se</text>
+      <text x="214.586" y="1066.08" width="37.334" height="13.406">asimila</text>
+      <text x="255.254" y="1066.08" width="13.346" height="13.406">en</text>
+      <text x="271.934" y="1066.08" width="29.352" height="13.406">todos</text>
+      <text x="304.622" y="1066.08" width="18.672" height="13.406">sus</text>
+      <text x="326.63" y="1066.08" width="38.688" height="13.406">efectos</text>
+      <text x="368.654" y="1066.08" width="38.016" height="13.406">legales</text>
+      <text x="410.006" y="1066.08" width="6.674" height="13.406">a</text>
+      <text x="420.014" y="1066.08" width="20.018" height="13.406">una</text>
+      <text x="443.366" y="1066.08" width="23.342" height="13.406">letra</text>
+      <text x="470.042" y="1066.08" width="13.346" height="13.406">de</text>
+      <text x="486.722" y="1066.08" width="38.678" height="13.406">cambio</text>
+      <text x="528.734" y="1066.08" width="22.666" height="13.406">(Art.</text>
+      <text x="554.738" y="1066.08" width="20.018" height="13.406">774</text>
+      <text x="578.09" y="1066.08" width="16.01" height="13.406">del</text>
+      <text x="597.434" y="1066.08" width="38.018" height="13.406">Codigo</text>
+      <text x="638.786" y="1066.08" width="13.346" height="13.406">de</text>
+      <text x="655.466" y="1066.08" width="55.332" height="13.406">Comercio)</text>
+      <text x="289.95" y="1084.06" width="43.358" height="13.406">Avenida</text>
+      <text x="336.642" y="1084.06" width="26.678" height="13.406">Gran</text>
+      <text x="366.654" y="1084.06" width="50.678" height="13.406">Colombia</text>
+      <text x="420.666" y="1084.06" width="6.674" height="13.406">#</text>
+      <text x="430.674" y="1084.06" width="21.348" height="13.406">12E</text>
+      <text x="455.358" y="1084.06" width="3.996" height="13.406">-</text>
+      <text x="462.69" y="1084.06" width="13.346" height="13.406">96</text>
+      <text x="479.37" y="1084.06" width="32.006" height="13.406">Barrio</text>
+      <text x="514.71" y="1084.06" width="37.346" height="13.406">Colsag</text>
+      <text x="321" y="1102.05" width="49.992" height="13.406">CÚCUTA</text>
+      <text x="374.328" y="1102.05" width="3.996" height="13.406">-</text>
+      <text x="381.66" y="1102.05" width="42" height="13.406">NORTE</text>
+      <text x="426.996" y="1102.05" width="16.668" height="13.406">DE</text>
+      <text x="447" y="1102.05" width="74.006" height="13.406">SANTANDER</text>
+      <text x="362.46" y="1120.03" width="20.002" height="13.406">Tel.</text>
+      <text x="385.8" y="1120.03" width="20.354" height="13.406">+57</text>
+      <text x="409.488" y="1120.03" width="20.018" height="13.406">314</text>
+      <text x="432.84" y="1120.03" width="46.706" height="13.406">2190138</text>
+      <text x="281.2" y="1138.01" width="36.674" height="13.406">Correo</text>
+      <text x="321.208" y="1138.01" width="61.354" height="13.406">electronico:</text>
+      <text x="385.9" y="1138.01" width="174.9" height="13.406">facturacionpyme123@gmail.com</text>
+    </font>
+    <font size="10" face="WLKRFC+Helvetica" src="recibo_font2.ttf">
+      <text x="771.99" y="1161.88" width="40.012" height="11.172">SOLTEC</text>
+    </font>
+    <font size="16" face="Arial" color="#FF0064" src="recibo_font4.ttf">
+      <text x="20" y="30" width="74.719" height="17.875">Evaluation</text>
+      <text x="99.164" y="30" width="37.344" height="17.875">Only.</text>
+      <text x="140.953" y="30" width="56.922" height="17.875">Created</text>
+      <text x="202.32" y="30" width="28.453" height="17.875">with</text>
+      <text x="235.219" y="30" width="94.258" height="17.875">Aspose.PDF.</text>
+      <text x="333.922" y="30" width="68.477" height="17.875">Copyright</text>
+      <text x="406.844" y="30" width="76.516" height="17.875">2002-2019</text>
+      <text x="487.805" y="30" width="53.367" height="17.875">Aspose</text>
+      <text x="545.617" y="30" width="23.117" height="17.875">Pty</text>
+      <text x="573.18" y="30" width="26.688" height="17.875">Ltd.</text>
+    </font>
+  </page>
+</pdf2xml>

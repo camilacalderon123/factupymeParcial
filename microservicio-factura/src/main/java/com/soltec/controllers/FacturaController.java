@@ -1,5 +1,6 @@
 
 package com.soltec.controllers;
+import java.io.File;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -26,6 +27,7 @@ import com.soltec.service.ClienteService;
 import com.soltec.service.DetalleFacturaService;
 import com.soltec.service.FacturaService;
 import com.soltec.service.ProductoService;
+import com.soltec.util.EnviarCorreo;
 
 @RestController // Controlador de tipo Rest
 @CrossOrigin(origins="http://localhost:4200", methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT, RequestMethod.DELETE})
@@ -91,7 +93,10 @@ public class FacturaController {
 		
 	private String generarCUFE(Factura f) {
 		String cufe ="";	
- 
+		EnviarCorreo ec = new EnviarCorreo();
+		File fff= new File(System.getProperty("user.dir")+"/soltec.png");
+		File ff = new File(System.getProperty("user.dir")+"/recibo.pdf");
+		
 		Cliente cl = clienteService.findById(f.getCliente_numero_documento()).get();
 		
 		cufe+=(""+ f.getRango_numeracion() //NumFactura

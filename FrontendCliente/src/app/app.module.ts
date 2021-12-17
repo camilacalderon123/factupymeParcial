@@ -27,6 +27,9 @@ import { ListarFacturasComponent } from './factura/listar-facturas.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
 import { CrearUsuarioComponent } from './crear-usuario/crear-usuario.component';
 import { LayoutsComponent } from './layouts/layouts.component';
+import { AgregarEmpresaComponent } from './empresa/agregar-empresa.component';
+
+
 
 @NgModule({
   declarations: [
@@ -49,7 +52,8 @@ import { LayoutsComponent } from './layouts/layouts.component';
     ListarFacturasComponent,
     IniciarSesionComponent,
     CrearUsuarioComponent,
-    LayoutsComponent
+    LayoutsComponent,
+    AgregarEmpresaComponent,
   ],
   imports: [
     BrowserModule,
